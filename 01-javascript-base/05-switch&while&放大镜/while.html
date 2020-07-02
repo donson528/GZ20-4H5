@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            var arr = [11, 22, 33, 44, 55];
+
+            // for (var i = 0; i < arr.length; i++) {
+            //     console.log(arr[i]);
+            // }
+
+            // var i = 0;
+            // for (; i < arr.length; i++) {
+            //     console.log(arr[i]);
+            // }
+
+            // while (条件) {
+            //     需要执行的代码;
+            // }
+            // 判断条件 如果成立就循环
+
+            var i = 0;
+            while (i < arr.length) {
+                console.log(arr[i]);
+                // 记得循环增量 不要写死循环
+                i++;
+            }
+
+            // do {
+            //     要执行的代码
+            // } while (条件);
+            // 先做一遍再判断  至少会执行一次
+
+            var j = 0;
+            do {
+                console.log("xxx");
+                j++;
+            } while (j < 5);
+
+            // for/in - 循环遍历对象的属性
+            var obj = {
+                name: "nick",
+                age: 17,
+                job: "自由职业者",
+            };
+
+            // for (键名 in 对象) {
+            //     代码块
+            // }
+
+            for (key in obj) {
+                console.log(key, obj[key])
+            }
+        </script>
+    </body>
+</html>

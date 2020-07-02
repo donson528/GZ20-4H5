@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            #box {
+                width: 100px;
+                height: 100px;
+                background: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box">box</div>
+        <script>
+            // html 文档流 从上到下从左到右
+
+            // window.alert('xxx')
+            // alert('yyy')
+
+            // console.log('xxx')
+            // console.log('yyy')
+            // 控制台输出 多用于调试
+
+            // console.log(1+2)
+            // console.log(window)
+
+            // 获取文档 document
+
+            // 选中元素 document.getElementById('xxx')
+            // document.getElementById('box')
+
+            // 获取样式 读取行间样式
+            console.log(document.getElementById("box").style.background)
+
+
+            // 注释反注释 ctrl + /? 
+            // 更改样式
+            document.getElementById("box").style.background = "red";
+
+            // 获取样式 读取行间样式
+            console.log(document.getElementById("box").style.background)
+
+            // 更改css样式 行间样式
+            document.getElementById("box").style.color = "white";
+        </script>
+
+        <!-- DO NOT DO THIS file协议打开 file:///D:/GZ20-4H5/01-javascript/01/00.html -->
+
+        <!-- vscode Live Server 插件5500 或者hbuilderX 8848 自己内建服务器 热重载 -->
+        <!-- http://127.0.0.1:5500/01/00.html -->
+    </body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <button>btn</button>
+
+        <script>
+            var btn = document.getElementsByTagName("button")[0];
+            // btn.onclick = function () {
+            //     console.log('xx')
+            // }
+
+            function clickHandler() {
+                console.log("click1");
+            }
+            // btn.onclick = clickHandler
+            btn.onclick = function () {
+                clickHandler();
+            };
+
+            // 带参数的函数
+            function log(x) {
+                console.log(x);
+            }
+            // x 叫做形参
+
+            log();
+            log(10);
+            log(20);
+            // 10 20 实参
+
+            // 多个参数 强调顺序
+            function add(x, y) {
+                console.log(x + y);
+            }
+
+            add(5, 10);
+            add(5); //NaN 非数
+            add(10, 20);
+            add("10", 20);
+
+            // 5 + undefined
+            // 5 + 'hello'
+
+            // 参数默认值
+            function plus(x, y) {
+                // || 管道符 或者的意思 默认参数
+                y = y || 5;
+                console.log(x, y);
+                console.log(x + y);
+            }
+
+            plus(10, 1);
+            plus(20);
+
+            // n多个参数 arguments对象 所有参数的集合 类数组 数组
+            // function sum(x, y, z) {
+            //     console.log(x, y, z);
+            //     console.log(x + y + z);
+            // }
+
+            function sum() {
+                var n = 0;
+                // console.log(arguments);
+                for (var i = 0; i < arguments.length; i++) {
+                    console.log(arguments[i]);
+                    n = n + arguments[i];
+                }
+                // console.log(n)
+
+                return n;
+            }
+
+            var a = sum(1, 2, 3, 4, 5, 6, 7, 8, 9);
+            var b = sum(11, 22, 33);
+
+            // 函数返回值 return 纯函数
+            function test() {
+                // console.log(5)
+                return 10;
+                // 返回值
+            }
+            var x = test();
+
+            // 函数方法
+            function square(n) {
+                return n * n;
+                console.log("我不会出现");
+                // return 1返回值 2结束函数运行
+            }
+
+            var xx = square(2);
+        </script>
+        <script src="./test.js"></script>
+    </body>
+</html>

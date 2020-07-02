@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 程国栋 栋哥-->
+    <!-- 上课期间 不着急敲代码 将的过程中 如果有问题不要举手 直接喊停 -->
+    <!-- 作业 每天的代码 就是默认作业 作业 拓展 -->
+    <!-- js阶段面试题  4-7 -->
+
+
+
+    <div class="box">box1</div>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+    </style>
+
+
+    <!-- jquery 1支持ie678 2 不支持678 3.ES6  zepot简化不支持ie  3g 减小文件体积-->
+    <!-- 引入jquery 把别人代码 库 引入到我们的前面 -->
+    <script src="https://cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        console.log($)
+        // ƒ (a,b){return new n.fn.init(a,b)}
+
+        console.log(document.querySelector('.box'))
+        // DOM对象
+        // $(selector).action()
+        console.log($('.box'))
+        // jQuery对象
+
+
+
+        // 原生方法 CSS方法 操作行间样式
+        document.querySelector('.box').style.background = 'blue'
+        console.log(document.querySelector('.box').style.width)
+
+        // jQuery方法  设置行间样式 读取计算样式
+        $('.box').css('background', 'orange')
+        console.log($('.box').css('width'))
+
+
+        document.querySelector('.box').addEventListener('click', function () {
+            console.log('xx')
+        }, false)
+
+        // 
+        $('.box').click(function () {
+            console.log('xx2')
+        })
+    </script>
+
+    <hr>
+    <button>btn</button>
+    <div class="box">box2</div>
+    <script>
+        $('button').click(function () {
+            $('.box').css('display', 'none')
+            //  $('.box') 不确定一个 n个 没有
+            // jquery 里面不需要 遍历
+
+            $('.stage').css('color', 'blue')
+            // jquery 选错  选择不存在的元素 不会报错
+
+            // document.querySelector('.stage').style.color = 'orange'
+            // 操作不存在的元素 会报错
+
+
+            console.log($('.stage'))
+            console.log(document.querySelector('.stage'))
+        })
+    </script>
+
+
+
+    <input type="text" value="hello world">
+    <script>
+        // $(selector).css(propertyName);
+        // $(selector).css(propertyName, value);
+        // $(selector).click(function (e) { 
+
+        // });
+        // $(document).ready(function () {
+
+        // });
+
+        // innerHtml
+        console.log($('.box').html())
+        // 读取 只能返回第一个
+        // $('.box').html('boxxxx')
+        $('.box').html('<i>box-html</i>')
+
+        // 赋值设置多个
+
+
+        // innerText
+        // 读取设置多个
+        // console.log($('.box').text())
+        $('.box').text('<i>box-html</i>')
+
+        console.log(document.querySelector('input').value)
+        console.log($('input').val())
+
+        document.querySelector('input').value = 'xxx'
+        $('input').val('hello')
+    </script>
+
+</body>
+
+</html>

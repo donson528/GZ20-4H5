@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            position: absolute;
+            /* left: 0; */
+            top: 0;
+        }
+
+        img:last-child {
+            top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        // 构造函数
+        var Car = function (brand, color, imgSrc, speed) {
+            this.brand = brand;
+            this.color = color;
+            this.imgSrc = imgSrc;
+            this.x = 0;
+            // 已经走的距离
+            this.speed = speed
+        }
+        // 画出汽车的方法
+        Car.prototype.draw = function () {
+            // console.log(this.imgSrc)
+            // 创建节点
+            var node = document.createElement('img');
+            // 设置路径
+            node.setAttribute('src', this.imgSrc);
+            // 设置样式
+            node.style.left = this.x + 'px';
+            // 追加到页面
+            document.body.appendChild(node);
+
+            // 保存节点到实例对象 方便后面使用
+            this.node = node
+        }
+
+        // 汽车移动的方法
+        Car.prototype.move = function () {
+            this.x += this.speed
+            this.node.style.left = this.x + 'px'
+        }
+
+        // 实例化
+        var car1 = new Car('BMW', 'yellow', './img/car1.png', 3)
+        var car2 = new Car('TESELA', 'green', './img/car2.png', 5)
+
+
+        car1.draw()
+        car2.draw()
+
+        setInterval(function () {
+            car1.move()
+            car2.move()
+        }, 100)
+    </script>
+</body>
+
+</html>

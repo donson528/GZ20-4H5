@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li class="test">item 3 test</li>
+        <li>item 4</li>
+        <li>item 5</li>
+    </ul>
+    <script>
+        // $('li.test').css('background', 'red')
+        // $('li.test').prev().css('background', 'red')
+        // $('li.test').prevAll().css('background', 'red')
+
+        // $('li.test').prev().css('background', 'red').html('hello')
+
+        // $('li.test').css('background', 'red').prev().html('hello')
+        // end()	结束当前链中最近的一次筛选操作，并把匹配元素集合返回到前一次的状态
+
+        $('li.test').css('background', 'red')
+            .prev().html('hello')
+            .end()
+            .next().text('xxx')
+    </script>
+</body>
+
+</html>

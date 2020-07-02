@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            #box {
+                width: 100px;
+                height: 100px;
+                background: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- <script>
+            // 如果js 再html之前 加上 window.onload 当加载成功之后
+            // function 函数 js语句结尾后缀 ; 或者 不写
+            window.onload = function () {
+                console.log(document.getElementById("box"));
+                // null 空 没有
+                // 获取的时候 文档还没有加载完成
+
+                // 单引号双引号都可以
+                document.getElementById("box").style.background = "red";
+                // Uncaught TypeError: Cannot read property 'style' of null
+            };
+        </script> -->
+
+        <div id="box">box</div>
+        <button id="btn">btn</button>
+
+        <!-- 建议写后面 1少写代码 2不好调试 3js一般都是再最后面加载 -->
+
+        <!-- <script>
+            document.getElementById("box").style.background = "red";
+            document.getElementById("box").style.color = "white";
+            // document.getElementById("box").style.font-size = "24px";
+            // Uncaught SyntaxError: Invalid left-hand side in assignment
+
+            // 小驼峰写法 首字母小写 其余单词首字母大写
+            document.getElementById("box").style.fontSize = "24px";
+        </script> -->
+
+        <script>
+            // 变量 var声明变量
+            var x = 10;
+            // x 理解为初中数学 代数
+            console.log(x);
+            console.log("x");
+            // 加上引号之后就不是代数了 原原本本的x这个文字
+            console.log(1 + 2);
+            console.log("1+2");
+
+            // 变量取名 不能数字开头 可以使用 _ $ 不推荐
+            // 小驼峰写法 英文 lottery   surplusLife   currentScore
+            // 保留关键字 https://www.runoob.com/js/js-reserved.html
+
+            var 当前得分 = 100;
+            console.log(当前得分);
+            // 中文 不推荐
+
+            var box = document.getElementById("box");
+
+            // box.style.background = 'red'
+            // box.style.color = 'white'
+
+            // 点击box的时候 切换box 的样式  事件
+            // 函数 function() {...}
+            box.onclick = function () {
+                // 要执行的代码块
+                box.style.background = "red";
+                box.style.color = "white";
+                box.style.fontSize = "24px";
+            };
+
+
+
+            // 小练习 点击按钮的时候 改变 box的样式
+            document.getElementById('btn').onclick = function () {
+                // 要执行的代码块
+                box.style.background = "red";
+                box.style.color = "white";
+                box.style.fontSize = "24px";
+            }
+        </script>
+
+
+
+    </body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .tab {
+        width: 300px;
+        background: red;
+      }
+      .tab .header {
+        overflow: hidden;
+      }
+      .tab .header li {
+        float: left;
+      }
+      .tab .header li.active {
+        background: lightblue;
+      }
+      .tab .content li {
+        display: none;
+      }
+      .tab .content li.active {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tab news">
+      <ul class="header">
+        <li class="active">tab 1</li>
+        <li>tab 2</li>
+        <li>tab 3</li>
+        <li>tab 4</li>
+        <li>tab 5</li>
+      </ul>
+      <ul class="content">
+        <li class="active">content 1</li>
+        <li>content 2</li>
+        <li>content 3</li>
+        <li>content 4</li>
+        <li>content 5</li>
+      </ul>
+    </div>
+
+    <!-- <script>
+      var tab = document.querySelector(".tab");
+      var headers = tab.querySelectorAll(".header li");
+      var contents = tab.querySelectorAll(".content li");
+
+      for (var i = 0; i < headers.length; i++) {
+        headers[i].index = i;
+        headers[i].style.width = 100 / headers.length + "%";
+        headers[i].onclick = function () {
+          //   console.log(this.index);
+          // 当前的点击的 高亮其他移除高亮
+          // 当前下表对应的content 高亮 其他移除高亮
+          var _this = this;
+          headers.forEach(function (element, index) {
+            // console.log(_this.index);
+            if (index == _this.index) {
+              element.classList.add("active");
+              contents[index].classList.add("active");
+            } else {
+              element.classList.remove("active");
+              contents[index].classList.remove("active");
+            }
+          });
+        };
+      }
+    </script> -->
+
+    <script>
+      function Tab(dom) {
+        this.tab = dom;
+        this.headers = this.tab.querySelectorAll(".header li");
+        this.contents = this.tab.querySelectorAll(".content li");
+        this.current = 0;
+
+        // 绑定事件 设置样式
+        for (var i = 0; i < this.headers.length; i++) {
+          var _this = this;
+          this.headers[i].index = i;
+          this.headers[i].style.width = 100 / this.headers.length + "%";
+          this.headers[i].onclick = function () {
+            // console.log(this, this.index, _this);
+            // 这里的this指向 dom元素
+            // 调用这个实例对象的show方法
+            // 构造器属性 原型对象属性 方法
+            _this.current = this.index;
+            _this.show(this.index);
+          };
+        }
+      }
+      Tab.prototype.show = function (n) {
+        this.current = n;
+        for (var i = 0; i < this.headers.length; i++) {
+          if (n == i) {
+            this.headers[i].classList.add("active");
+            this.contents[i].classList.add("active");
+          } else {
+            this.headers[i].classList.remove("active");
+            this.contents[i].classList.remove("active");
+          }
+        }
+      };
+
+      // function init(dom) {
+      //   return new Tab(dom);
+      // }
+      var x = new Tab(document.querySelector(".news"));
+    </script>
+
+    <hr />
+    <div class="tab products">
+      <ul class="header">
+        <li class="active">tab 1</li>
+        <li>tab 2</li>
+        <li>tab 3</li>
+      </ul>
+      <ul class="content">
+        <li class="active">content 1</li>
+        <li>content 2</li>
+        <li>content 3</li>
+        <!-- <li>content 4</li> -->
+      </ul>
+    </div>
+    <script>
+      // var y = new Tab(document.querySelector(".products"));
+      new Tab(document.querySelector(".products"));
+    </script>
+
+    <!-- 作业 封装选项卡 理解  -->
+    <!-- 拓展 封装放大镜 同一个页面可以有多个 -->
+  </body>
+</html>

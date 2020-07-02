@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function myFunction(a, b) {
+        console.log(this);
+        return a * b;
+      }
+      myFunction(10, 2);
+      window.myFunction(10, 2);
+
+      var obj = {
+        username: "nick",
+        age: 17,
+        greet: function () {
+          console.log("hello my name is ", this.username);
+          // this指向 函数运行时挂在的对象
+        },
+      };
+      obj.greet();
+
+      var xxx = obj.greet;
+      window.xxx();
+
+      var objxxx = {
+        username: "mark",
+        test: {
+          username: "marry",
+          greet: obj.greet,
+        },
+      };
+
+      objxxx.test.greet();
+      var yyy = objxxx.test.greet;
+      yyy();
+
+      // 构造函数 调用返回对象
+      var Person = function (name, age) {
+        this.name = name;
+        this.age = age;
+      };
+
+      var a = new Person("nick", 17);
+      var b = new Person("mark", 18);
+    </script>
+  </body>
+</html>

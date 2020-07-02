@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label {
+            display: block;
+        }
+
+        label span {
+            width: 100px;
+            display: inline-block;
+        }
+
+        label input {
+            width: 150px;
+            transition: all 0.3s;
+            outline: none;
+            border: 1px solid black;
+            border-radius: 5px;
+
+        }
+
+        label input:focus {
+            width: 200px;
+            border-color: red;
+        }
+
+        label i.success {
+            color: green;
+        }
+
+        label i.error {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" method="get">
+        <label>
+            <span>姓名:</span>
+            <input type="text" name="username">
+            <i>长度1~12个字符</i>
+        </label>
+        <label>
+            <span>密码:</span>
+            <input type="text" name="password">
+            <i>密码必须由字母和数字组成</i>
+        </label>
+        <label>
+            <span>重复密码:</span>
+            <input type="text" name="repassword">
+            <i>两次密码需要相同</i>
+        </label>
+        <label>
+            <span>电子邮箱:</span>
+            <input type="email" name="email">
+            <i></i>
+        </label>
+        <input type="submit" value="提交">
+        <input type="reset" value="取消">
+
+    </form>
+
+    <script>
+        document.getElementsByName('username').item(0).oninput = function () {
+            console.log(this.value)
+            if (this.value.length <= 12 && this.value.length >= 1) {
+                // console.log(this.nextElementSibling)
+                this.nextElementSibling.innerText = '输入正确'
+                this.nextElementSibling.className = 'success'
+            } else {
+                // this.nextElementSibling.innerText = '输入错误'
+                this.nextElementSibling.className = 'error'
+            }
+
+        }
+
+        var pattEmail = /^\w+(\.|-)?\w+@\w+-?\w+(\.[A-z]{2,}){1,2}$/i
+        // xx@qq-123.com
+        // 邮箱
+        document.getElementsByName('email').item(0).oninput = function () {
+            // console.log(this.value.match(pattEmail))
+            console.log(this.nextElementSibling)
+            if (this.value.match(pattEmail)) {
+                // 输入匹配
+                this.nextElementSibling.innerText = '输入正确'
+                this.nextElementSibling.className = 'success'
+            } else {
+                this.nextElementSibling.innerText = '输入错误'
+                this.nextElementSibling.className = 'error'
+            }
+
+        }
+        // http://www.jq22.com/demo/jquery-yz-150205225715/
+        // 作业  完善 密码 重复密码验证
+
+
+        // 拓展 https://www.battlenet.com.cn/account/creation/zh/tos.html
+    </script>
+</body>
+
+</html>

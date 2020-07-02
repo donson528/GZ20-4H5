@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            var arr1 = [11, 22, 33];
+            var arr2 = new Array(44, 55, 66);
+            var arr3 = new Array(3);
+            // concat() 方法用于连接两个或多个数组。
+            // 该方法不会改变现有的数组，而仅仅会返回被连接数组的一个副本。
+            // array1.concat(array2,array3,...,arrayX)
+
+            var arr4 = arr1.concat(arr2);
+            // arr4.push(99);
+            // 往数组末尾追加 会改变原始数组 返回新数组的长度
+
+            // arr4.pop()
+            // 从数组末尾删除 会改变原始数组 返回被删除的项
+
+            // unshift()	向数组的开头添加一个或更多元素，并返回新的长度。
+            // array.unshift(item1,item2, ..., itemX)
+
+            // arr4.unshift(99)
+            // 往数组开头插入 会改变原始数组 返回新数组的长度
+
+            // arr4.shift()
+            // 删除数组开头一项 会改变原始数组 返回被删除的项
+
+            // fill() 方法用于将一个固定值替换数组的元素。
+            // array.fill(value, start, end)
+            // arr3.fill('00')
+
+            // forEach() 方法用于调用数组的每个元素，并将元素传递给回调函数。
+            // array.forEach(function(currentValue, index, arr), [thisValue])
+
+            arr4.forEach(function (item, index, arr) {
+                console.log(item, index, arr);
+            });
+            // item遍历的每一项, index当前索引, arr遍历的数组
+            console.log("===========");
+
+            for (var i = 0; i < arr4.length; i++) {
+                console.log(arr4[i], i, arr4);
+            }
+
+            // array.indexOf(item, start)
+            // arr4.indexOf(44) // 3
+            // arr4.indexOf(88) // -1
+            // 如果有就返回下标  没有返回-1
+
+            var fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+            fruits.join();
+            // 返回新数组里面每一项拼合的字符串 默认以, 分隔
+
+            fruits.join("|");
+            var str = fruits.join(" ");
+            str.split(" ");
+
+            // array.sort(sortfunction)
+            // fruits.sort()
+            // 会改变原始数组 默认按字母排序 unicode
+
+            var arr = [1, 34, 23, 15, 9, 6, 78];
+            console.log(arr);
+            console.log(arr.sort());
+
+            // 带上排序函数 按照数字大小排序
+            console.log(
+                arr.sort(function (a, b) {
+                    return a - b;
+                })
+            );
+
+            console.log(
+                arr.sort(function (a, b) {
+                    return b - a;
+                })
+            );
+
+            // 反转数组顺序
+            // arr.reverse()
+
+            // 作业题  数组排序去重
+            var arr = [23, 43, 54, 656, 45, 53, 43, 23, 4, 5, 6, 4, 5];
+            // 作业 放大镜 完善 
+            // 拓展 跑火车完善
+        </script>
+    </body>
+</html>

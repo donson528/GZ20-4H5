@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">box</div>
+    <div class="box">box</div>
+    <script src="https://cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        var jqBox = $('.box')
+        jqBox[0] // DOM对象
+        jqBox.eq(0) // jq对象
+
+        // jq对象转 dom对象
+
+        // var domBox = document.querySelectorAll('.box')
+        var domBox = document.getElementsByClassName('box')
+        // var domBox = document.querySelector('.box')
+        $(domBox)
+        // 把dom对象转换成为jq对象  $(xx)  xx dom对象 html集合 nodelist
+
+    </script>
+</body>
+
+</html>

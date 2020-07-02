@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+</head>
+
+<body>
+    <script>
+
+        // 设置
+        Cookies.set('name', 'nicholas')
+        Cookies.set('age', '17', {
+            expires: 7
+        })
+
+        // 读取
+        console.log(Cookies.get('name'))
+
+        // 删除
+        Cookies.remove('name')
+        Cookies.remove('age')
+    </script>
+
+    <ul class="theme">
+        <li title="npz">牛皮纸</li>
+        <li title="hy">护眼模式</li>
+        <li title="yj">夜间模式</li>
+    </ul>
+    <div class="content npz">
+        自从人类获得星际间航行技术后，已经过去了三百年的时间。对新世界的好奇与兴奋催促着数不清的人类踏上了开阔宇宙，寻找新的宜居星球的旅程。在最初的五十年，人类的足迹以起源行星为起点，向着宇宙的四面八方扩张。</div>
+
+    <style>
+        .content.npz {
+            background: rgb(134, 111, 60);
+            color: white;
+        }
+
+        .content.hy {
+            background: lightgreen;
+        }
+
+        .content.yj {
+            background: black;
+            color: white;
+        }
+    </style>
+    <script>
+
+        // 切换主题
+        var lis = document.querySelectorAll('.theme li')
+        lis.forEach(function (li, index) {
+            li.onclick = function () {
+                var theme = this.title
+                document.querySelector('.content').className = 'content ' + theme
+
+                // 保存主题到 cookie
+                Cookies.set('theme', theme, {
+                    expires: 365
+                })
+            }
+        })
+
+        // 加载页面
+
+        var theme = Cookies.get('theme')
+        if (theme) {
+            document.querySelector('.content').className = 'content ' + theme
+        }
+    </script>
+
+<!--作业 网页换肤  http://book.zongheng.com/chapter/967648/60755758.html -->
+<!-- 拓展 封装自己的 cookie操作库 -->
+<!-- 拓展 根据图片懒加载原理 实现 图片懒加载 -->
+
+</body>
+
+</html>

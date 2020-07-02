@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var Car = function (x, y) {
+            this.x = x;
+            this.y = y;
+        }
+
+        // 方法 挂在 到 构造函数（对象） 原型对象 这个属性上
+        Car.prototype.move = function () {
+
+        }
+
+        // 通过构造函数生成的对象
+        var bmw = new Car(10, 10)
+        var tesela = new Car(100, 100)
+
+        var nissan = {
+            x: 50,
+            y: 50
+        }
+        // 构造函数
+        // prototype 原型对象
+
+
+        // 实例对象
+        // __proto__ 原型链
+        // constructor 构造器
+
+        // 实例对象 __proto__这个属性 在访问的时候可以忽略掉
+        bmw.__proto__.constructor == bmw.constructor
+        bmw.__proto__.move == bmw.move
+
+        bmw.__proto__.__proto__.toString === bmw.toString
+        // 访问一个对象的方法  先找自己的属性 没有=> 原型链上面找 => 上一级原型链上面找
+        // 数组Array String
+
+        // 实例对象 constructor
+        bmw.__proto__.constructor === Car
+
+
+        // 
+        // Object.assign(obj1,obj2)
+        // bmw.__proto__.__proto__
+
+
+        var arr = [11, 22, 33]
+        var arr1 = new Array(11, 22, 33)
+        arr.__proto__.constructor === Array
+        arr.__proto__
+        // 实例对象访问原型链属性 这对象里面的属性和方法 来源 构造函数 原型对象 上面的 方法和属性
+        // 挂载到 构造函数 原型对象 上面的方法或属性 => 通过这个构造函数 实例化 生成 实例对象 的原型链 对象上面
+        bmw.move === Car.prototype.move
+        bmw.constructor === Car
+        bmw.__proto__ === Car.prototype
+
+        arr.push === Array.prototype.push
+
+
+        var d = new Date()
+        Date.prototype
+
+        d.__proto__ === Date.prototype
+
+
+
+        var str = 'hello'
+        var str1 = new String('hello')
+        str.__proto__ === String.prototype
+        // str.__proto__  String.prototype 对象
+        str.__proto__.__proto__ === Object.prototype
+
+        Object.prototype.__proto__  // null
+        // 原型链的尽头就是null
+
+        // 面试题
+        // str.__proto__.__proto__ === null
+        // str.__proto__.constructor === Object
+        // str.__proto__.__proto__.constructor === Object
+        // str.__proto__.__proto__.__proto__ === null
+
+        // call apply  bind
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            button.active {
+                background: orange;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="btns">
+            <button>btn1</button>
+            <button>btn2</button>
+            <button>btn3</button>
+        </div>
+        <ul class="contents">
+            <li>content1</li>
+            <li>content2</li>
+            <li>content3</li>
+        </ul>
+
+        <script>
+            var lis = document.getElementsByTagName("li");
+            var btns = document.getElementsByTagName("button");
+
+            var current = 0;
+            function showCurrent() {
+                for (var i = 0; i < lis.length; i++) {
+                    if (i == current) {
+                        lis[i].style.display = "block";
+                        // 高亮当前button
+                        btns[i].className = 'active'
+                    } else {
+                        lis[i].style.display = "none";
+                        // 取消其他 高亮button
+                        btns[i].className = ''
+
+                    }
+                }
+            }
+            showCurrent();
+
+            // function activeBtn() {
+            //     for (var i = 0; i < btns.length; i++) {
+            //         if (i == current) {
+            //             btns[i].style.background = "red";
+            //         } else {
+            //             btns[i].style.background = "none";
+            //         }
+            //     }
+            // }
+            // activeBtn()
+
+
+            for (var i = 0; i < btns.length; i++) {
+                // 给btn添加属性
+                btns[i].xxx = i;
+
+                // 给所有的btn都添加事件
+                btns[i].onclick = function () {
+                    // console.log(i)
+                    console.log(this.xxx);
+                    // 改变current
+                    current = this.xxx
+
+                    // 显示current
+                    showCurrent()
+
+                    // 高亮active
+                    // activeBtn()
+                };
+            }
+        </script>
+    </body>
+</html>

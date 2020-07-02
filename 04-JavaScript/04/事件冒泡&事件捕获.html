@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bigbox {
+            width: 300px;
+            height: 300px;
+            background: lightgreen;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background: lightpink;
+        }
+
+        .smallbox {
+            width: 100px;
+            height: 100px;
+            background: lightseagreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bigbox">bigbox
+        <div class="box">box
+            <div class="smallbox">smallbox</div>
+        </div>
+    </div>
+    <script>
+        var bigbox = document.querySelector('.bigbox')
+        var box = document.querySelector('.box')
+        var smallbox = document.querySelector('.smallbox')
+
+        document.body.onclick = function () {
+            console.log('body点击')
+        }
+
+        bigbox.onclick = function (event) {
+            console.log('bigbox点击', event)
+        }
+
+        box.onclick = function (event) {
+            console.log('box点击', event)
+            event.stopPropagation()
+        }
+
+        smallbox.onclick = function (event) {
+            event.stopPropagation()
+            // 阻止事件冒泡
+
+            console.log('smallbox点击', event)
+        }
+
+        // 事件冒泡 从内到外 从精确到不精确 从子到父
+        // 触发子元素事件 如果父级上也有相同事件 也会出发
+        // smallbox => box => bigbox
+    </script>
+</body>
+
+</html>

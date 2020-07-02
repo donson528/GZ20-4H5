@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- RegExp：是正则表达式（regular expression）的简写。 -->
+    <script>
+        // 正则表达式描述了字符的模式对象。
+        // 当您检索某个文本时，可以使用一种模式来描述要检索的内容。RegExp 就是这种模式。
+        // 简单的模式可以是一个单独的字符。
+        // 更复杂的模式包括了更多的字符，并可用于解析、格式检查、替换等等。
+        // 您可以规定字符串中的检索位置，以及要检索的字符类型，等等。
+
+
+        // var patt=new RegExp(pattern,modifiers);
+        // 或更简单的方法
+        // var patt=/pattern/modifiers;
+        // 两个修饰符 i忽略大小写  g全局查找 （而不是在找到第一个就停止查找,而是找到所有的匹配）
+
+        // var patt = /a/i
+        var patt = new RegExp('a', 'i')
+        var str = 'Hello World'
+
+
+        // string.match(regexp) replace() search()
+        console.log(str.match('e'))
+        // 如果找到 返回数组 没有找到 返回null
+        console.log(str.match('o'))
+
+        console.log(str.match(/e/))
+        console.log(str.match(/o/))
+        console.log(str.match(/o/g))
+        console.log(str.match(/h/i))
+
+        //serch可以使用正则 返回第一个查找到的下标 没找到 返回-1   indexOf
+        console.log(str.search(/h/i))
+        console.log(str.search(/o/gi))
+
+
+
+        var str = "Is this all there is?";
+
+        console.log(str)
+        console.log(str.match(/is/gi))
+
+
+
+
+        console.log('+++++++++++')
+
+        var patt = /is/ig
+        // var patt = /is/gi
+        // console.log(patt.test(str))
+        // test 是正则的方法 返回布尔值  用来测试正则表达式是否匹配（简单理解包含） 字符串
+        console.log(patt.exec(str))
+        console.log(patt.exec(str))
+        // 前提是带了修饰符 g
+        // 正则方法 test exec 有一个类似【指针】的概念  每次执行 指针后移
+        // 比如匹配三次  执行第四次就是null 第五次从头开始  最后一次返回 null
+
+    </script>
+</body>
+
+</html>

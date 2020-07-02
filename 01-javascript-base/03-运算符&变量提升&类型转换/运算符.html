@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // 算术运算符
+            console.log(1 + 1);
+            console.log(10 - 1);
+            console.log(10 * 3);
+            console.log(10 / 3);
+            console.log(10 % 3);
+            console.log(10 % 6);
+            console.log((2 + 3) * (10 / 5));
+
+            var x = 5;
+            console.log(x++); // 5 先返回后累加
+            console.log(++x); // 7 先累加后返回
+
+            // 赋值运算符
+
+            var a = 10;
+            a += 5;
+            // a = a + 5
+            console.log(a);
+
+            a -= 10;
+            console.log(a);
+
+            // 字符串拼接 +
+            var strA = "hello";
+            var strB = " world";
+
+            console.log(strA + strB);
+
+            console.log(strA + a);
+            // 数值与字符串相加 会先把数值【隐式转换】为字符串 然后拼接
+
+            console.log(strA + a + x);
+            console.log(strA + (a + x));
+
+            // 比较运算符
+
+            console.log(3 >= 10);
+            console.log(3 == 10);
+            console.log(3 <= 10);
+
+            console.log("5" == 5);
+            // 值相等 【隐式转换】 字符串转数值
+            console.log("h" == 5);
+            console.log("h" > 5);
+            console.log("h" < 5);
+            // NaN 非数 不与任何值相等
+            console.log(NaN == NaN);
+
+            console.log("5" === 5);
+            // 类型和值都相等
+
+            console.log("4" != 4);
+            console.log("4" !== 4);
+
+            console.log("========");
+            // 逻辑运算符 &&/and  ||/or ！
+            console.log(true && true);
+            console.log(true && false);
+            console.log(false && false);
+            // 所有条件都要为真
+
+            console.log(true || true);
+            console.log(true || false);
+            console.log(false || false);
+            // 只要有一个为真就可以
+
+            console.log(!true);
+            // 取反
+
+            console.log("========");
+
+            // 早上上课
+            // 洗脸 and 吃过早餐 and 手机or钱包 && 是否是周末
+
+            var hasWashed = true;
+
+            var eatApple = false;
+            var eatOrange = true;
+
+            var hasPhone = true;
+            var hasWallet = false;
+
+            var isWeekend = false;
+            // 是否周末
+
+            var canGo = hasWashed && (eatApple || eatOrange) && (hasPhone || hasWallet) && !isWeekend;
+            console.log("canGo", canGo);
+
+            // 三目运算符 条件运算符 三元表达式
+            // variablename=(condition)?value1:value2
+
+            var x = 3 > 10 ? "大于成立" : "不成立";
+
+            var y =
+                hasWashed && (eatApple || eatOrange) && (hasPhone || hasWallet) && !isWeekend
+                    ? "可以出发了"
+                    : "不可以出发";
+        </script>
+    </body>
+</html>
