@@ -1,9 +1,14 @@
 const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: {
+    index: "./src/index.js",
+    another: "./src/print.js",
+  },
   output: {
-    filename: "main.js",
+    filename: "[name].[chunkhash].js",
     path: path.resolve(__dirname, "dist"),
   },
   module: {
@@ -32,8 +37,17 @@ module.exports = {
       // 处理图片
       {
         test: /\.(jpg|gif|png|jpeg|svg)$/,
-        use: ["file-loader"]
+        use: ["file-loader"],
       },
     ],
   },
+
+  plugins: [
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      title: "Output Management",
+      minify: "false",
+      template: "./src/index.html",
+    }),
+  ],
 };

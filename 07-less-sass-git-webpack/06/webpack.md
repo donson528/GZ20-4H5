@@ -34,3 +34,25 @@ module: {
 
 # 处理图片
 npm install --save-dev file-loader
+
+
+
+# 管理输出
+
+chunkhash hash
+
+# 代码分离
+
+```
+entry: {
+    index: "./src/index.js",
+    another: "./src/print.js",
+  },
+```
+
+# 自动生成html 更新插入的js文件名【哈希值会变】
+HtmlWebpackPlugin
+
+
+# 清理dist
+npm install clean-webpack-plugin --save-dev

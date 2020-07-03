@@ -22,3 +22,8 @@ function component() {
 }
 
 document.body.appendChild(component());
+
+
+import printMe from './print.js';
+
+printMe()
