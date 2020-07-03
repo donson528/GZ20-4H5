@@ -30,3 +30,7 @@ module: {
 
 // loader链式写法 从后往前
 ```
+
+
+# 处理图片
+npm install --save-dev file-loader

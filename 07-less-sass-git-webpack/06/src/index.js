@@ -1,6 +1,8 @@
-import _ from 'lodash'
+import _ from "lodash";
 
-import './style.less'
+import "./style.less";
+
+import Icon from "./xxx.png";
 
 function component() {
   var element = document.createElement("div");
@@ -9,7 +11,12 @@ function component() {
   // Lodash, now imported by this script
   element.innerHTML = _.join(["Hello", "webpack"], " ");
 
-  element.classList.add('box');
+  element.classList.add("box");
+
+  var node = document.createElement("img");
+  node.src = Icon;
+
+  element.appendChild(node);
 
   return element;
 }

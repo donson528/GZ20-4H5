@@ -14,7 +14,6 @@ module.exports = {
       //   use: ["style-loader", "css-loader"],
       // },
 
-
       // 处理less文件
       {
         test: /\.less$/,
@@ -29,6 +28,11 @@ module.exports = {
             loader: "less-loader", // compiles Less to CSS
           },
         ],
+      },
+      // 处理图片
+      {
+        test: /\.(jpg|gif|png|jpeg|svg)$/,
+        use: ["file-loader"]
       },
     ],
   },
