@@ -50,4 +50,10 @@ module.exports = {
       template: "./src/index.html",
     }),
   ],
+  devtool: "inline-source-map",
+  // devtool: "cheap-source-map",
+
+  devServer: {
+    contentBase: "./dist",
+  },
 };

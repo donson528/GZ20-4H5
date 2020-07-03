@@ -1,0 +1,11 @@
+body {
+  background: lightblue url('xxx.png');
+}
+body .box {
+  color: red;
+  -webkit-transition: all 0.3;
+  -o-transition: all 0.3;
+  -moz-transition: all 0.3;
+  transition: all 0.3;
+}
+/*# sourceMappingURL=./style.css.map */
