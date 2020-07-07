@@ -1,0 +1,121 @@
+html {
+	font-family: sans-serif;
+	line-height: 1.15;
+	text-size-adjust: 100%;
+	-webkit-tap-highlight-color: transparent;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	background: #FFF;
+	font-family: 'Poppins', sans-serif;
+}
+body a {
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    text-decoration: none;
+}
+
+.header {
+	height: 80px;
+	z-index: 999;
+	position: relative;
+}
+
+.navbar-header{
+	padding: 15px!important;
+		}
+
+#logo {
+	font-size: 40px !important;
+	letter-spacing: -1px;
+	color: #FC427B !important;
+	text-shadow: 2px 5px 3px rgba(0, 0, 0, 0.06) !important;
+	padding: 0 !important;
+	font-family: 'Srisakdi', cursive !important;
+	font-weight: bold;
+	line-height: 50px;
+}
+
+#bs-example-navbar-collapse-1 {
+	padding: 15px 48px;
+}
+
+.navbar-default {
+	background-color: #f8f8f8;
+	/* border-color: #e7e7e7; */
+}
+
+#v-right li a {
+	color: #4c4c4c;
+	text-transform: capitalize;
+	font-weight: 500;
+	font-size: 15px;
+	letter-spacing: 1px;
+	display: inline-block;
+	transition: 0.5s all;
+}
+
+#v-right li a.active {
+	color: #FC427B;
+	transition: 0.5s all;
+}
+
+#v-right li a:hover {
+	color: #FC427B;
+	transition: 0.5s all;
+	text-decoration: none;
+}
+
+/* 下拉框 */
+.navbar-nav>li>.dropdown-menu {
+	margin-top: 0;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	background: #333;
+	position: absolute;
+	left: 20px;
+	padding: 10px 50px 10px 5px;
+	border-radius: 4px;
+}
+
+.navbar-nav>li>.dropdown-menu li a {
+	color: white !important;
+	padding-left: 5px !important;
+}
+
+.navbar-nav>li>.dropdown-menu li a:hover {
+	color: black !important;
+}
+
+.header.isclick{
+	margin-bottom: 400px;
+	transition: all .5s;
+}
+
+@media screen and (max-width: 768px) {
+ #logo{
+		position: absolute;
+		left: 15px;
+		top: 20px;
+	}
+	#v-right li {
+		text-align: center!important;
+	}
+	#v-right li a:hover {
+		color: #0062CC;
+	}
+	#v-right li a.active {
+		color: #0062CC;
+	}
+	
+	.navbar-header button{
+		background-color: transparent!important;
+		border: none!important;
+	}
+}
+

@@ -1,0 +1,402 @@
+.navbar {
+  padding: 15px 40px;
+  margin-bottom: 0;
+}
+.navbar .navbar-header .navbar-brand {
+  font-family: Srisakdi, cursive;
+  color: #fc427b;
+  font-size: 40px;
+  font-weight: 700;
+}
+.navbar .nav li a {
+  font-size: 14px;
+  color: #4c4c4c;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+.navbar .nav li a:hover {
+  color: #FC427B;
+  transition: all 0.3s;
+}
+.carousel .carousel-inner {
+  position: relative;
+}
+.carousel .carousel-inner .item .container {
+  position: absolute;
+  top: -580px;
+  right: -181px;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  margin: 0 auto;
+}
+.carousel .carousel-inner .item .container .messbox {
+  margin-left: 100px;
+  text-align: right;
+}
+.carousel .carousel-inner .item .container .messbox h5 {
+  font-weight: 400;
+  color: #000000;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.carousel .carousel-inner .item .container .messbox h3 {
+  color: #ffffff;
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 53px;
+}
+.carousel .carousel-inner .item .container .messbox a {
+  border: 2px solid white;
+  padding: 12px 25px;
+  background: #FC427B;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+}
+.carousel .carousel-inner .item .container .messbox a:hover {
+  background: #ffffff;
+  color: #000000;
+  transition: all 0.5s;
+}
+.welcomebox {
+  width: 100%;
+  padding: 48px 48px 0 48px;
+}
+.welcomebox .container {
+  margin: 0 auto;
+  margin-top: 90px;
+}
+.welcomebox .container .welcome-left {
+  float: left;
+  margin-top: 20px;
+}
+.welcomebox .container .welcome-left h3 {
+  font-size: 40px;
+  letter-spacing: 1px;
+  font-weight: 100;
+  font-family: 'Poppins', sans-serif;
+}
+.welcomebox .container .welcome-left h4 {
+  font-size: 22px;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  font-family: initial;
+  color: #464646;
+  font-style: italic !important;
+  margin-bottom: 30px;
+}
+.welcomebox .container .welcome-left .bottom-box .bottom-grid-left {
+  float: left;
+}
+.welcomebox .container .welcome-left .bottom-box .bottom-grid-left .icon span {
+  font-size: 28px;
+  color: #fff;
+  border-radius: 50%;
+  background: #FC427B;
+  padding: 30px;
+}
+.welcomebox .container .welcome-left .bottom-box .bottom-grid-left h5 {
+  letter-spacing: 1px;
+  color: #343a40;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 15px;
+  font-size: 20px;
+  margin-top: 25px;
+}
+.welcomebox .container .welcome-left .bottom-box .bottom-grid-left p {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  letter-spacing: 1px;
+  line-height: 1.9;
+  color: #999;
+  font-family: 'Sintony', sans-serif;
+}
+.welcomebox .container .welcome-right {
+  float: right;
+  margin: 0;
+  padding: 0;
+}
+.welcomebox .container .welcome-right img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+.headbox {
+  width: 100%;
+  background: #FC427B;
+}
+.headbox .container {
+  margin: 0 auto;
+}
+.headbox .container .servicesbox {
+  float: left;
+  margin-top: 100px;
+  text-align: center;
+  padding: 10px 15px;
+}
+.headbox .container .servicesbox i {
+  color: #fff;
+  font-size: 32px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  width: 90px;
+  height: 90px;
+  line-height: 2.6;
+}
+.headbox .container .servicesbox h4 {
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #fff;
+  font-size: 22px;
+  font-family: 'Poppins', sans-serif;
+  padding-top: 30px;
+  padding-bottom: 5px;
+}
+.headbox .container .servicesbox p {
+  color: #fff;
+  margin: 0 0 10px;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  letter-spacing: 1px;
+  line-height: 1.9;
+  font-family: 'Sintony', sans-serif;
+  padding-bottom: 60px;
+}
+.girlbox {
+  width: 100%;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.girlbox .container {
+  margin: 0 auto;
+}
+.girlbox .container .title {
+  text-align: center;
+  margin-top: 40px;
+}
+.girlbox .container .title h3 {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+  font-size: 28px;
+  margin-bottom: 9px;
+}
+.girlbox .container .title p {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  letter-spacing: 1px;
+  line-height: 1.9;
+  color: #999;
+  font-family: 'Sintony', sans-serif;
+}
+.girlbox .container .girlpack {
+  margin-top: 40px;
+}
+.girlbox .container .girlpack .potosbox a {
+  text-align: center;
+  display: block;
+  position: relative;
+}
+.girlbox .container .girlpack .potosbox a img {
+  width: 100%;
+}
+.girlbox .container .girlpack .potosbox a h3 {
+  color: #FFFFFF;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #38D2FE;
+  padding: 10px 25px;
+  font-size: 26px;
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.girlbox .container .girlpack .potosbox a h3 span {
+  display: block;
+  font-weight: 100;
+  font-size: 16px;
+}
+.girlbox .container .girlpack .potosbox .girlmess {
+  padding: 24px 0px;
+}
+.girlbox .container .girlpack .potosbox .girlmess h4 {
+  font-size: 23px;
+  color: #343a40;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 8px;
+}
+.girlbox .container .girlpack .potosbox .girlmess .look {
+  margin-top: 20px;
+}
+.girlbox .container .girlpack .potosbox .girlmess .look span {
+  padding: 0 5px;
+}
+.girlbox .container .girlpack .potosbox .girlmess .look span a {
+  display: inline-block;
+  text-decoration: none;
+  color: #999;
+  letter-spacing: 1px;
+  font-size: 15px;
+}
+.girlbox .container .girlpack .potosbox .girlmess .look span a:hover {
+  color: #000;
+}
+.girlbox .container .girlpack .potosbox .girlmess p {
+  margin-top: 6px;
+  padding: 0;
+  font-size: 15px;
+  letter-spacing: 1px;
+  line-height: 1.9;
+  color: #999;
+  font-family: 'Sintony', sans-serif;
+}
+.wrapper {
+  background: url("../images/bg2.jpg") no-repeat top;
+  min-height: 600px;
+  background-size: 100%;
+  padding: 48px 0px;
+}
+.wrapper .container {
+  margin: 0 auto;
+}
+.wrapper .container .titlemess {
+  margin-top: 60px;
+}
+.wrapper .container .titlemess span {
+  font-size: 26px;
+  color: rgba(255, 255, 255, 0.35);
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.wrapper .container .titlemess h3 {
+  font-weight: 800;
+  font-size: 32px;
+  color: #fff;
+  letter-spacing: 1px;
+  line-height: 1.4;
+  font-family: 'Poppins', sans-serif;
+}
+.wrapper .container .titlemess p {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  letter-spacing: 1px;
+  line-height: 1.9;
+  color: #eee;
+  font-family: 'Sintony', sans-serif;
+}
+.geally {
+  width: 100%;
+  padding: 48px 0px;
+}
+.geally .container {
+  margin: 0 auto;
+}
+.geally .container .geally-title {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.geally .container .geally-title h3 {
+  font-size: 26px;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 5px;
+}
+.geally .container .geally-title p {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  letter-spacing: 1px;
+  line-height: 1.9;
+  color: #999;
+  font-family: 'Sintony', sans-serif;
+}
+.geally .container .news-girl .row .girl-img {
+  padding: 0 15px;
+}
+@media (max-width: 768px) {
+  .geally .container .news-girl .row .girl-img {
+    text-align: center;
+  }
+}
+.geally .container .news-girl .row .girl-img a {
+  display: block;
+  text-align: center;
+}
+.geally .container .news-girl .row .girl-img a img {
+  width: 100%;
+}
+.newsletter {
+  margin-top: 15px;
+  background: url("../images/bg3.jpg") no-repeat center;
+  min-height: 382px;
+  background-size: 100%;
+}
+.newsletter .container {
+  margin: 0 auto;
+  padding: 48px 15px;
+  margin-top: 20px;
+}
+.newsletter .container .news-title {
+  margin-top: 50px;
+  text-align: center;
+}
+.newsletter .container .news-title h3 {
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 32px;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 5px;
+}
+.newsletter .container .news-title p {
+  color: #e0e0e0;
+  font-size: 15px;
+  letter-spacing: 1px;
+  line-height: 1.9;
+  font-family: 'Sintony', sans-serif;
+}
+.newsletter .container .c-check {
+  margin-top: 45px;
+}
+.newsletter .container .c-check .form-group input {
+  padding: 15px;
+  border: none;
+  letter-spacing: 1px;
+  font-size: 15px;
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  background: #fff;
+}
+.newsletter .container .c-check .form-group .sub {
+  background: #38d2fe;
+  border: none;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  cursor: pointer;
+  padding: 15px;
+}
+@media (max-width: 768px) {
+  .newsletter {
+    min-height: 180px;
+    background-size: auto 100%;
+  }
+}

@@ -1,0 +1,431 @@
+*{
+    text-decoration: none;
+}
+
+
+.Wzhenjies {
+    margin-top: 50px;
+    /* margin-left: 200px; */
+}
+
+.Wzhenjies .l_top {
+    padding: 20px 0 0 20px;
+    margin-bottom: 50px;
+}
+
+.Wzhenjies .l_top h1 {
+    font-size: 35px;
+    color: #212529;
+    line-height: 50px;
+    color: #8c9090;
+    margin-bottom: 20px;
+    text-shadow: 2px 5px 3px rgba(0, 0, 0, 0.06);
+}
+
+.Wzhenjies .l_top h3 {
+    font-style: italic;
+    font-size: 18px;
+    color: #464646;
+    font-weight: bold;
+}
+
+.Wzhenjies .l_bottom .tubiao {
+    display: block;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    color: #fff;
+    font-size: 30px;
+    background-color: #fc427b;
+    border-radius: 50%;
+}
+
+.Wzhenjies .bottom_text {
+    line-height: 30px;
+    margin-top: 30px;
+}
+
+.Wzhenjies .bottom_text h1 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.Wzhenjies .bottom_text p {
+    font-size: 16px;
+    color: #a69999;
+}
+
+@media (max-width: 990px) {
+    .Wzhenjies .l_bottom .tubiao {
+        margin: 0 auto;
+    }
+    .Wzhenjies {
+        text-align: center;
+    }
+    .Shishang_nr h1 {
+        width: 100%;
+    }
+    .Shishang_nr p {
+        width: 100%;
+    }
+}
+
+/* 网站介绍结束 */
+/* 点这里开始 */
+
+.Dianzhel {
+    padding: 50px 0px;
+    background-color: #fc427b;
+}
+/* 
+.Dianzhel_nr{
+    margin: 0 -20%;
+} */
+.Dianzhel_nr div {
+    text-align: center;
+}
+
+.Dianzhel_nr div span {
+    display: block;
+    width: 100px;
+    height: 100px;
+    border: 2px solid #fff;
+    margin: 0 auto;
+    border-radius: 100%;
+    color: #fff;
+    line-height: 100px;
+    text-align: center;
+    font-size: 40px;
+}
+
+.Dianzhel_nr div h1 {
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+    margin: 70px 0 10px 0;
+}
+
+.Dianzhel_nr div p {
+    font-size: 14px;
+    color: #fff;
+    line-height: 30px;
+}
+
+@media (max-width:1200px){
+    .Dianzhel_nr{
+        /* margin: 0 -20%; */
+    }
+}
+/* 点这里结束 */
+/* 博客文章开始 */
+
+.Boke_nr .thumbnail {
+    padding: 0;
+    border: 0;
+}
+
+.Boke_nr .caption {
+    padding: 0;
+}
+.biaoti h1{
+    text-align: center;
+}
+.biaoti span{
+    display: block;
+    text-align: center;
+}
+.Boke_nr .caption h3 {
+    font-size: 20px;
+    margin: 20px 0 10px 0;
+    font-weight: bold;
+}
+
+.Boke_nr .caption a {
+    font-size: 16px;
+    color: #999999;
+    margin-right: 20px;
+    letter-spacing: 1px;
+}
+.Boke_nr .caption a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.Boke_nr .caption a span {
+    font-size: 14px;
+    color: #ff4f81;
+    margin-right: 5px;
+}
+
+.Boke_nr .caption p {
+    font-size: 15px;
+    margin-top: 20px;
+    line-height: 25px;
+    color: #999999;
+    letter-spacing: 1px;
+}
+
+.Boke_nr .thumbnail_img {
+    position: relative;
+}
+
+.Boke_nr .thumbnail_img .paim {
+    width: 80px;
+    height: 80px;
+    background-color: #38d2fe;
+    text-align: center;
+    /* border-radius: 0 30px 0 0; */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.thumbnail_img .paim h1 {
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+    margin-top: 30%;
+    text-align: center;
+    /* margin: 0 auto; */
+}
+
+.thumbnail_img .paim span {
+    font-size: 16px;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.Boke_nr .caption {
+    padding: 0;
+}
+.biaoti h1{
+    text-align: center;
+}
+/* 博客文章结束 */
+/* 时尚外观开始 */
+
+.Shishang {
+    margin-top: 5%;
+    padding: 5% 0;
+    padding-bottom: 20%;
+    background: url(../images/bg2.jpg) no-repeat 0 0;
+    background-size: 100%;
+    overflow: hidden;
+}
+
+.Shishang_nr h3 {
+    font-size: 30px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, .3);
+}
+
+.Shishang_nr h1 {
+    width: 40%;
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #fff;
+}
+
+.Shishang_nr p {
+    width: 40%;
+    font-size: 16px;
+    line-height: 30px;
+    color: #fff;
+}
+
+
+/* 时尚外观结束 */
+/* 画廊开始 */
+
+.Hualang_nr .thumbnail {
+    padding: 0;
+    border: 0;
+}
+
+.Hualang {
+    padding-bottom: 3%;
+}
+@media (max-width: 768px) {
+    .Toubudao_nr {
+        padding: 10px 0;
+    }
+    .Dianzhel {
+        padding: 50px 0 0 0;
+    }
+    .Dianzhel_nr div {
+        margin-bottom: 30px;
+    }
+    .Dianzhel_nr div span {
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+        font-size: 30px;
+    }
+    .Dianzhel_nr div h1 {
+        margin: 40px 0 10px 0;
+    }
+    .lbt_nr {
+        position: absolute;
+        top: 10%;
+        right: 5%;
+        text-align: right;
+    }
+    .lbt_nr h3 {
+        font-size: 14px;
+    }
+    .lbt_nr h1 {
+        font-size: 30px;
+        margin: 5px 0;
+    }
+    .lbt_nr div {
+        margin-top: 20px;
+        padding: 10px;
+    }
+    .lbt_nr div span {
+        font-size: 10px;
+    }
+    .Boke_nr .thumbnail_img .paim {
+        width: 80px;
+        height: 80px;
+    }
+    .Boke_nr .caption p {
+        margin-bottom: 10%;
+    }
+    .Shishang_nr h3 {
+        font-size: 14px;
+    }
+    .Shishang_nr h1 {
+        width: 60%;
+        font-size: 20px;
+        margin: 10px 0;
+        line-height: 25px;
+    }
+    .Shishang_nr p {
+        font-size: 10px;
+        line-height: 15px;
+    }
+    .xs_button {
+        margin-right: 0;
+    }
+    .Lianxiwm_right {
+        margin-top: 5%;
+    }
+}
+/*  画廊结束*/
+.Tonxun {
+    background: url(../images/bg3.jpg);
+    padding: 3% 0 7% 0;
+    margin-bottom: 3%;
+    height: 380px;
+}
+
+.Tonxun .biaoti h1,
+.Tonxun .biaoti span {
+    color: #fff;
+    font-weight: 600;
+}
+.Tonxun .biaoti  span {
+    color: #6c757d;
+    font-weight: 600;
+}
+.inline .form-group input,
+.inline button {
+    display: block;
+    width: 100%;
+    padding: 25px 15px;
+}
+.form-inline {
+    margin-top: 50px;
+}
+.inline button {
+    padding: 15px 0;
+    background-color: #38d2fe;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+
+/* 时事通讯结束 */
+
+
+
+/* 联系我们开始 */
+
+.Lianxiwm {
+    padding-bottom: 5%;
+}
+
+.Lianxiwm_nr .Lianxiwm_left {
+    padding: 7% 0 7% 7%;
+    box-shadow: 5px 0px 11px 0px rgba(0, 0, 0, 0.06);
+    /* line-height: 50px; */
+    margin-bottom: 5%;
+}
+
+.Lianxiwm_nr .Lianxiwm_left:last-child {
+    margin-bottom: 0;
+}
+
+.Lianxiwm_nr .Lianxiwm_left h1,
+.Lianxiwm_nr .Lianxiwm_right h1 {
+    font-size: 25px;
+    color: #38d2fe;
+    font-weight: bold;
+    margin-bottom: 5%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.Lianxiwm_nr .Lianxiwm_left p {
+    font-size: 14px;
+    color: #999999;
+    letter-spacing: 1px;
+    margin-bottom: 3%;
+    
+}
+
+.biaoti span {
+    color: #999;
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 1.9;
+    color: #999;
+    font-family: 'Sintony', sans-serif;
+}
+.Lianxiwm_nr .Lianxiwm_right {
+    padding: 7%;
+    box-shadow: 5px 0px 11px 0px rgba(0, 0, 0, 0.06);
+}
+
+.Lianxiwm_right input {
+    padding: 5% 10px;
+    margin-bottom: 2%;
+}
+
+.Lianxiwm_right textarea {
+    height: 10.1em;
+    resize: none;
+}
+
+.Lianxiwm_right button {
+    margin-top: 2%;
+    width: 100%;
+    padding: 3% 0;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #fff;
+    background-color: #fc427b;
+}
+
+
+/* 联系我们结束 */

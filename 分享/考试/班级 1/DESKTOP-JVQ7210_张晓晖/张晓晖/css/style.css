@@ -1,0 +1,743 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+body a {
+    transition: 0.5s all;
+    text-decoration: none;
+}
+
+body a:hover {
+    text-decoration: none;
+    transition: 0.5s all;
+}
+
+body a:focus,
+a:hover {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+a {
+    text-decoration: none
+}
+
+a.move-top {
+    width: 34px;
+    height: 34px;
+    background: url(../images/move-top.png) no-repeat 0px 0px;
+    display: inline-block;
+}
+
+/* //bottom-to-top */
+/* header */
+/* navigation */
+/* CSS Document */
+.toggle-2,
+.toggle,
+[id^=drop] {
+    display: none;
+}
+
+/* Giving a background-color to the nav container. */
+nav {
+    margin: 0;
+    padding: 0;
+}
+
+
+#logo a {
+    float: left;
+    display: initial;
+    font-weight: 700;
+    font-size: 40px;
+    letter-spacing: -1px;
+    color: #FC427B;
+    text-shadow: 2px 5px 3px rgba(0, 0, 0, 0.06);
+    padding: 0;
+    font-family: 'Srisakdi', cursive;
+}
+
+
+/* Since we'll have the "ul li" "float:left"
+ * we need to add a clear after the container. */
+
+nav:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Removing padding, margin and "list-style" from the "ul",
+ * and adding "position:reltive" */
+nav ul {
+    float: right;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+}
+
+/* Positioning the navigation items inline */
+nav ul li {
+    margin: 0px;
+    display: inline-block;
+    float: left;
+}
+
+/* Styling the links */
+nav a {
+    color: #4c4c4c;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 1px;
+    display: inline-block;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+
+nav ul li ul li:hover {
+    background: #f8f9fa;
+}
+
+.menu li .drop-text:hover {
+    color: #000;
+}
+
+/* Background color change on Hover */
+
+.menu li.active a,
+.menu li a:hover {
+    color: #FC427B;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+/* Hide Dropdowns by Default
+ * and giving it a position of absolute */
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 26px;
+    background: #333;
+    padding: 10px;
+    border-radius: 4px;
+    z-index: 9;
+    /* has to be the same number as the "line-height" of "nav a" */
+}
+
+/* Display Dropdowns on Hover */
+nav ul li:hover>ul {
+    display: inherit;
+}
+
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+    width: 170px;
+    float: none;
+    display: list-item;
+    position: relative;
+}
+
+nav ul ul li a {
+    color: #fff;
+    padding: 5px 10px;
+    display: block;
+    font-size: 14px;
+}
+
+/* Second, Third and more Tiers	
+ * We move the 2nd and 3rd etc tier dropdowns to the left
+ * by the amount of the width of the first tier.
+*/
+nav ul ul ul li {
+    position: relative;
+    top: -60px;
+    /* has to be the same number as the "width" of "nav ul ul li" */
+    left: 170px;
+}
+
+
+/* Change ' +' in order to change the Dropdown symbol */
+li>a:only-child:after {
+    content: '';
+}
+
+a.reqe-button {
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    border-radius: 4px;
+}
+
+/* Media Queries
+--------------------------------------------- */
+@media(max-width: 800px) {
+    nav a {
+        font-size: 14px;
+    }
+}
+
+@media all and (max-width : 736px) {
+
+    #logo {
+        display: block;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+        float: none;
+    }
+
+    nav {
+        margin: 0;
+    }
+
+    /* Hide the navigation menu by default */
+    /* Also hide the  */
+    .toggle+a,
+    .menu {
+        display: none;
+    }
+
+    /* Stylinf the toggle lable */
+    .toggle {
+        display: block;
+        padding: 8px 14px;
+        font-size: 16px;
+        text-decoration: none;
+        border: none;
+        float: right;
+        background-color: #fff;
+        color: #000;
+        border-radius: 4px;
+        letter-spacing: 1px;
+        cursor: pointer;
+    }
+
+    .menu .toggle {
+        float: none;
+        text-align: center;
+        margin: auto;
+        width: 40%;
+        padding: 5px;
+        font-weight: normal;
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+
+    .toggle:hover {
+        color: #FC427B;
+    }
+
+    /* Display Dropdown when clicked on Parent Lable */
+    [id^=drop]:checked+ul {
+        display: block;
+        background: #fff;
+        padding: 15px 0;
+        text-align: center;
+    }
+
+    /* Change menu item's width to 100% */
+    nav ul li {
+        display: block;
+        width: 100%;
+        padding: 5px 0;
+    }
+
+    nav ul ul .toggle,
+    nav ul ul a {
+        padding: 0 40px;
+    }
+
+    nav ul ul ul a {
+        padding: 0 80px;
+    }
+
+    nav a:hover,
+    nav ul ul ul a {
+        background-color: transparent;
+    }
+
+    nav ul li ul li .toggle,
+    nav ul ul a,
+    nav ul ul ul a {
+        padding: 14px 20px;
+        color: #FFF;
+        font-size: 17px;
+    }
+    menu
+    /* 
+    nav ul li ul li .toggle,
+    nav ul ul a {
+        background-color: #212121;
+    } */
+
+    /* Hide Dropdowns by Default */
+    nav ul ul {
+        float: none;
+        position: static;
+        color: #ffffff;
+        /* has to be the same number as the "line-height" of "nav a" */
+    }
+
+    /* Hide menus on hover */
+    nav ul ul li:hover>ul,
+    nav ul li:hover>ul {
+        display: none;
+    }
+
+    /* Fisrt Tier Dropdown */
+    nav ul ul li {
+        display: block;
+        width: 100%;
+        padding: 0;
+    }
+
+    nav ul ul ul li {
+        position: static;
+        /* has to be the same number as the "width" of "nav ul ul li" */
+
+    }
+
+    .menu li.active a,
+    .menu li a:hover {
+        color: #000;
+    }
+
+    nav a {
+        color: #000;
+        font-size: 15px;
+    }
+
+    .menu li.active a,
+    .menu li a:hover {
+        color: #686de0;
+    }
+    nav ul ul li a {
+        color: #000;
+    }
+}
+@media all and (max-width : 330px) {
+
+    nav ul li {
+        display: block;
+        width: 94%;
+    }
+}
+    .csslider>ul>li {
+        min-height: 733px;
+    }
+    
+    .csslider>ul>li:first-child {
+        background: url(../images/2.jpg) no-repeat center;
+        background-size: cover;
+    }
+    
+    .csslider>ul>li:nth-child(2) {
+        background: url(../images/1.jpg) no-repeat top;
+        background-size: cover;
+    }
+    
+    .csslider>ul>li:last-child {
+        background: url(../images/4.jpg) no-repeat center;
+        background-size: cover;
+    }
+    .bg-theme {
+        background: #031f9a;
+    }
+    
+    .bg-theme1 {
+        background: #0fcef7;
+    }
+    
+    .w3ls_banner_txt {
+        margin-top: 14.5vw;
+        margin-left: auto;
+        text-align: right;
+        max-width: 560px;
+    }
+    
+    h3.w3ls_pvt-title {
+        color: #fff;
+        text-transform: capitalize;
+        font-weight: 700;
+        font-size: 3.5em;
+        text-shadow: 2px 5px 3px rgba(0, 0, 0, 0.06);
+    }
+    
+    .w3ls_banner_txt h5 {
+        font-weight: 400;
+        color: #000;
+        font-size: 22px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+    }
+    .button-style {
+        padding: 12px 25px;
+        border: none;
+        color: #fff;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border: 2px solid #fff;
+        background: #FC427B;
+    }
+    
+    .button-style:hover,
+    .button-style-2:hover {
+        background: #fff;
+        color: #000;
+    }
+    .welcome-left h3 {
+        font-size: 40px;
+        letter-spacing: 1px;
+        font-weight: 100;
+        text-shadow: 2px 5px 3px rgba(0, 0, 0, 0.06);
+    }
+    
+    .welcome-left h4 {
+        font-size: 22px;
+        line-height: 1.5;
+        letter-spacing: 1px;
+        font-family: initial;
+        color: #464646;
+    }
+    .support-grid h5 {
+        letter-spacing: 1px;
+            color: #343a40;
+    }
+    
+    .icon-effect span {
+        font-size: 28px;
+        color: #fff;
+        border-radius: 50%;
+        background: #FC427B;
+        padding: 1em;
+    }
+    .posts-top {
+        position: relative;
+    }
+    
+    .posts-top h3 {
+        font-size: 26px;
+        color: #fff;
+        position: absolute;
+        background: #38d2fe;
+        padding: 10px 25px;
+        bottom: 0;
+        letter-spacing: 1px;
+        text-align: center;
+        font-weight: 600;
+    }
+    
+    .posts-top h3 span {
+        display: block;
+        font-weight: 100;
+        font-size: 16px;
+    }
+    
+    .posts-w3ls-bottom ul li {
+        display: inline-block;
+    }
+    
+    .posts-w3ls-bottom h4 {
+        font-size: 23px;
+        color: #343a40;
+    }
+    
+    .posts-w3ls-bottom i {
+        color: #ff4f81;
+    }
+    
+    .posts-w3ls-bottom a {
+        color: #999;
+        letter-spacing: 1px;
+        font-size: 15px;
+    }
+    
+    .posts-w3ls-bottom a:Hover {
+        color: #000;
+    }
+    .popup-effect {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.7);
+        transition: opacity 0ms;
+        visibility: hidden;
+        opacity: 0;
+        z-index: 99;
+    }
+    
+    .popup-effect:target {
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    .popup {
+        background: #fff;
+        border-radius: 4px;
+        max-width: 430px;
+        position: relative;
+        margin: 8em auto;
+        padding: 3em 2em;
+        z-index: 999;
+        text-align: center;
+    }
+    
+    .popup .close {
+        position: absolute;
+        top: 5px;
+        right: 15px;
+        transition: all 200ms;
+        font-size: 30px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #000;
+    }
+    
+    .popup .close:hover {
+        color: #686de0;
+    }
+    /* //blog */
+    /* services */
+    .serives-agile {
+        background: #FC427B;
+    }
+    
+    .services-w3ls-grid h4 {
+        letter-spacing: 1px;
+        font-weight: 600;
+    }
+    
+    .services-w3ls-grid p {
+        color: #fdfdfd;
+        font-weight: 300;
+    }
+    
+    .services-w3ls-grid i {
+        color: #fff;
+        font-size: 32px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        width: 90px;
+        height: 90px;
+        line-height: 2.6;
+    }
+    
+    /* //services */
+    
+    /* newsletter */
+    .title.news-titl h3 {
+        color: #fff;
+        font-weight: bold;
+        letter-spacing: 1px;
+        font-size: 32px;
+    }
+    
+    .title.news-titl p {
+        color: #e0e0e0;
+    }
+    
+    .newsletter_right_w3agile {
+        background: url(../images/bg3.jpg) no-repeat center;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        -ms-background-size: cover;
+    }
+    
+    .n-right-w3ls input[type="text"],
+    .n-right-w3ls input[type="email"] {
+        padding: 15px;
+        border: none;
+        letter-spacing: 1px;
+        font-size: 15px;
+    }
+    
+    .n-right-w3ls input[type="submit"] {
+        background: #38d2fe;
+        border: none;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        cursor: pointer;
+        padding: 15px;
+    }
+    
+    /* //newsletter */
+    .w3ls-bnrbtm {
+        background: url(../images/bg2.jpg) no-repeat top;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        -ms-background-size: cover;
+        min-height: 600px;
+    }
+    
+    h3.agile-title {
+        font-weight: 800;
+        font-size: 32px;
+        color: #fff;
+        letter-spacing: 1px;
+        line-height: 1.4;
+    }
+    
+    span.w3-line {
+        font-size: 26px;
+        color: rgba(255, 255, 255, 0.35);
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+    
+    
+    p.text-botm {
+        color: #eee;
+    }
+    
+    /*-- contact --*/
+    .address-grid,
+    .address-info {
+        background-color: #fff;
+        padding: 40px;
+        -webkit-box-shadow: 0px 2px 13px -1px rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: 0px 2px 13px -1px rgba(0, 0, 0, 0.15);
+        box-shadow: 0px 2px 13px -1px rgba(0, 0, 0, 0.15);
+    }
+    
+    .address-info.address-mdl {
+        margin: 2em 0;
+    }
+    
+    .address h4 {
+        font-size: 23px;
+        color: #38d2fe;
+        letter-spacing: 1px;
+        font-weight: 600;
+    }
+    
+    .address input[type="text"],
+    .address input[type="email"],
+    .address textarea {
+        color: #000;
+        background: none;
+        outline: none;
+        font-size: 15px;
+        padding: 11px;
+        margin-bottom: 16px;
+        letter-spacing: 1px;
+        border: none;
+        border-bottom: solid 1px #828282;
+        -webkit-appearance: none;
+        border-radius: 0px;
+    }
+    
+    .address textarea {
+        min-height: 11.7em;
+        -webkit-appearance: none;
+        resize: none;
+    }
+    
+    .address input[type="submit"] {
+        border: none;
+        outline: none;
+        color: #fff;
+        padding: 12px 0;
+        font-size: 16px;
+        letter-spacing: 1px;
+        margin-top: 1.7em;
+        width: 100%;
+        -webkit-appearance: none;
+        background: #FC427B;
+        transition: 0.5s all;
+        -webkit-transition: 0.5s all;
+        -o-transition: 0.5s all;
+        -moz-transition: 0.5s all;
+        -ms-transition: 0.5s all;
+    }
+    
+    .address p a {
+        color: #999;
+    }
+    
+    .address p a:hover {
+        color: #000;
+    }
+    
+    /* map */
+    .map iframe {
+        width: 100%;
+        border: none;
+        outline: none;
+        min-height: 400px;
+        display: block;
+    }
+    
+    /* //map */
+    /*-- //contact --*/
+    /* footer */
+    footer {
+        background: #212020;
+    }
+    
+    .footer-title {
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+    
+    .contact-info p a,
+    .contact-info p,
+    ul.links li a {
+        color: #ababab;
+        font-size: 14px;
+    }
+    
+    .contact-info p span {
+        display: block;
+    }
+    
+    .footer-style-w3lsp a {
+        color: #ababab;
+    }
+    
+    .contact-info h4 {
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+    .copy-right{
+        color: #FFF;
+    }

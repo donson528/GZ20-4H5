@@ -1,0 +1,390 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+.head {
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+.head .navbar-default {
+  background-color: white;
+  border-color: white;
+  margin-bottom: 0px;
+}
+.head .navbar-default .container-fluid {
+  padding: 25px 60px;
+}
+.head .navbar-default .container-fluid .navbar-header .navbar-brand {
+  color: #fc427b;
+  font-size: 48px;
+  font-family: "Srisakdi", cursive;
+  font-weight: bolder;
+  text-shadow: 2px 4px 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.head .navbar-default .container-fluid .nav > li {
+  padding: 15px 17px;
+}
+.head .navbar-default .container-fluid .nav a {
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #4c4c4c;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0px;
+}
+.head .navbar-default .container-fluid .nav li:nth-child(1) > a {
+  color: #fc427b;
+}
+.head .navbar-default .container-fluid .nav a:hover {
+  color: #fc427b;
+}
+.head .navbar-default .container-fluid .nav .drop > .drop-toggle > .glyphicon {
+  top: -1px;
+  font-weight: 100;
+  font-size: 8px;
+}
+.head .navbar-default .container-fluid .nav .drop-menu {
+  padding: 0px;
+  list-style: none;
+  position: absolute;
+  top: 45px;
+  left: 20px;
+  background-color: #333;
+  border-radius: 5px;
+  z-index: 99;
+  padding: 15px 0px;
+}
+.head .navbar-default .container-fluid .nav .drop-menu li {
+  line-height: 45px;
+  padding: 0px;
+}
+.head .navbar-default .container-fluid .nav .drop-menu li a {
+  color: white !important;
+  text-align: left;
+  margin: 0px 15px;
+  display: inline-block;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  cursor: pointer;
+}
+.head .navbar-default .container-fluid .nav .drop-menu li a:hover {
+  text-decoration: none !important;
+  background-color: #fff;
+  color: black !important;
+}
+.banner {
+  z-index: 9;
+  position: relative;
+  margin: 0px;
+}
+.banner img {
+  width: 100%;
+}
+.banner .carousel-caption {
+  position: absolute;
+  width: 40%;
+  top: 24%;
+  left: 52%;
+  padding: 0px;
+  right: 0%;
+  text-align: right;
+}
+.banner .carousel-caption h5 {
+  color: black;
+  font-size: 26px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+.banner .carousel-caption h3 {
+  font-size: 65px;
+  font-weight: bold;
+}
+.banner .carousel-caption a {
+  border: 2px solid white;
+  border-radius: 4px;
+  padding: 15px 30px;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-top: 50px;
+  color: white;
+  font-size: 18px;
+  background-color: #fc427b;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.banner .carousel-caption a:hover {
+  background-color: white;
+  color: black;
+}
+.banner .carousel .carousel-indicators {
+  bottom: 40px;
+}
+.banner .carousel .carousel-indicators li {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 5px solid white;
+  background-color: #fc427b;
+  line-height: 20px;
+}
+.banner .carousel .carousel-indicators li.active {
+  background-color: white;
+  margin: 1px;
+}
+.banner .carousel .carousel-indicators li:hover {
+  background-color: white;
+}
+.web {
+  padding-top: 100px;
+}
+.web img {
+  width: 100%;
+}
+.web .container .row .web-left .left-top h3 {
+  font-size: 45px;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+.web .container .row .web-left .left-top h5 {
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-style: oblique;
+  font-family: inherit;
+  color: #464646;
+  padding: 20px 0px;
+}
+.web .container .row .web-left .left-bottom {
+  float: left;
+}
+.web .container .row .web-left .left-bottom span {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: #fc427b;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 35px;
+  line-height: 100px;
+  margin-top: 30px;
+}
+.web .container .row .web-left .left-bottom p {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #999;
+  font-family: "Sintony", sans-serif;
+  letter-spacing: 1px;
+}
+.heading {
+  background-color: #fc427b;
+}
+.heading .container {
+  padding: 100px 15px;
+}
+.heading .container .row div {
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+}
+.heading .container .row div span {
+  display: inline-block;
+  border: 2px solid white;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  font-size: 35px;
+  line-height: 104px;
+}
+.heading .container .row div h3 {
+  margin-top: 40px;
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+.heading .container .row div P {
+  font-size: 17px;
+  font-family: "Sintony", sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: #fdfdfd;
+  margin-top: 20px;
+}
+.log {
+  margin: 80px 0px;
+}
+.log .container .log-head {
+  text-align: center;
+}
+.log .container .log-head .one h4 {
+  font-size: 30px;
+}
+.log .container .log-head .one p {
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-family: "Sintony", sans-serif;
+  padding-top: 5px;
+}
+.log .container .log-bottom {
+  margin-top: 40px;
+}
+.log .container .log-bottom img {
+  width: 100%;
+  cursor: pointer;
+}
+.log .container .log-bottom .bottom-one,
+.log .container .log-bottom .bottom-two,
+.log .container .log-bottom .bottom-three {
+  position: relative;
+}
+.log .container .log-bottom .bottom-one .one,
+.log .container .log-bottom .bottom-two .one,
+.log .container .log-bottom .bottom-three .one {
+  display: inline-block;
+  width: 85px;
+  height: 70px;
+  background-color: #38d2fe;
+  text-align: center;
+  color: white;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  padding-top: 5px;
+}
+.log .container .log-bottom .bottom-one .one span,
+.log .container .log-bottom .bottom-two .one span,
+.log .container .log-bottom .bottom-three .one span {
+  padding: 0px 15px;
+}
+.log .container .log-bottom .bottom-one .one span:nth-child(1),
+.log .container .log-bottom .bottom-two .one span:nth-child(1),
+.log .container .log-bottom .bottom-three .one span:nth-child(1) {
+  font-size: 26px;
+  font-weight: 600;
+}
+.log .container .log-bottom .bottom-one .one span:nth-child(2),
+.log .container .log-bottom .bottom-two .one span:nth-child(2),
+.log .container .log-bottom .bottom-three .one span:nth-child(2) {
+  font-weight: 100;
+}
+.log .container .log-bottom .two {
+  margin-top: 30px;
+}
+.log .container .log-bottom .two h4 {
+  font-size: 24px;
+}
+.log .container .log-bottom .two div {
+  cursor: pointer;
+  margin-top: 10px;
+}
+.log .container .log-bottom .two div i {
+  color: #fc427b;
+}
+.log .container .log-bottom .two div span {
+  color: #999;
+  font-size: 18px;
+}
+.log .container .log-bottom .two div span:hover {
+  color: black;
+}
+.log .container .log-bottom .two div .two-first {
+  padding-right: 15px;
+}
+.log .container .log-bottom .two p {
+  margin-top: 20px;
+  letter-spacing: 1px;
+  font-family: "Sintony", sans-serif;
+  font-size: 15px;
+  line-height: 25px;
+}
+.Image {
+  position: relative;
+  width: 100%;
+}
+.Image .container {
+  width: 100%;
+}
+.Image .container img {
+  width: 100%;
+}
+.Image .container .word {
+  position: absolute;
+  left: 50px;
+  top: 50px;
+  width: 80%;
+}
+.Image .container .word h3 {
+  color: white;
+  color: #786c5c;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+.Image .container .word h2 {
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+.Image .container .word p {
+  color: white;
+  word-spacing: 5px;
+  line-height: 30px;
+}
+@media (min-width: 992px) {
+  .Image .container .word h3 {
+    width: 50%;
+  }
+  .Image .container .word h2 {
+    width: 50%;
+  }
+  .Image .container .word p {
+    width: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .Image .container .word {
+    left: 60px;
+    top: 30px;
+  }
+  .Image .container .word h3 {
+    width: 40%;
+  }
+  .Image .container .word h2 {
+    width: 40%;
+  }
+  .Image .container .word p {
+    width: 40%;
+  }
+}
+.gallery {
+  width: 100%;
+}
+.gallery h2 {
+  padding: 20px 0px;
+  text-align: center ;
+}
+.gallery p {
+  text-align: center;
+  color: #999999;
+}
+.gallery .container {
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+.gallery .container .row div {
+  margin-top: 20px;
+}
+.gallery .container .row div img {
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .gallery .container .row div {
+    text-align: center;
+  }
+  .gallery .container .row div img {
+    width: 50%;
+  }
+}
+/*# sourceMappingURL=./main.css.map */

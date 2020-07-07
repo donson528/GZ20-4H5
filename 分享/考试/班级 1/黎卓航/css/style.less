@@ -1,0 +1,567 @@
+@themeRed: #FC427B;
+@themeBlue: #38d2fe;
+@themeGray: #999;
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+a:hover{
+    text-decoration: none;
+}
+
+// 头部开始
+.header{
+    // background-color: blue;
+    .navbar{
+        padding: 16px 8px;
+        margin: 0;
+        background: none;
+        border: none;
+        @media (min-width:768px){
+            padding: 16px 48px;
+
+        }
+        .navbar-header{
+            button{
+                background: none;
+                border: none;
+                font-size: 16px;
+                color: @themeRed;
+                &.collapsed{
+                    color: black;
+                }
+            }
+            .navbar-brand{
+                font-size: 32px;
+                font-family: 'Srisakdi', cursive;
+                color: @themeRed;
+                font-weight: bold;
+                @media (min-width:768px){
+                    font-size: 36px;
+                }
+            }
+        }
+        .collapse{
+            .navbar-nav{
+                li{
+                    &.active{
+                        a{
+                            background: none;
+                            color:@themeRed;
+                        }
+                    }
+                    a{
+                        font-weight: 500;
+                        color: #4c4c4c;
+                        transition: all 0.3s;
+                        font-size: 16px;
+                        &:hover{
+                            color: @themeRed;
+                            background: none;
+                        }
+                    }
+                    &.dropdown{
+                        @media (min-width:768px){
+                            position: relative;
+
+                        }
+                        .dropdown-menu{
+                            background: #333;
+                            border-radius: 5px;
+                            @media (min-width:768px){
+                                position: absolute;
+                                left: 10px;    
+                                background: #333;
+                            }
+
+                            background: none;
+                            li{
+                                a{
+                                    color: black;
+                                    text-align: center;
+                                    font-size: 14px;
+                                    @media (min-width:768px){
+                                        color: white;
+                                        
+                                    }
+                                    &:hover{
+                                        color: @themeRed;
+                                    }
+                                }
+                            }
+                        }
+                        &.open{
+                            a{
+                                color: @themeRed;
+                                background: none;
+                            }
+                        }
+                    }
+                }
+            }
+            &.in{
+                border:none;
+                text-align: center;
+                li{
+                    a{
+                        &.home{
+                            color: blue;
+                        }                        
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+// banner 开始
+.banner{
+    width: 100%;
+    .carousel{
+        width: 100%;
+        .carousel-indicators{
+            li{
+                border: 4px solid #fff;
+                background-color: @themeRed;
+                padding: 4px;
+                margin: 0;
+                &:hover{
+                    background-color: white;
+                }
+                &.active{
+                    background-color: white;
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+        }
+        .carousel-inner{
+            width: 100%;
+            padding: 0;
+            .item{
+                width: 100%;
+                background-color: green;
+                height: 450px;
+                @media (min-width:768px) {
+                    height: 500px;
+                }
+                @media (min-width:992px) {
+                    height: 600px;
+                }
+                @media (min-width:1200px) {
+                    height: 733px;
+                }
+                .info-box{
+                    // margin-left: 500px;
+                    // margin-top: 120px;
+                    margin-top: 20%;
+                    float: right;
+                    h3{
+                        text-align: right;
+                        font-weight: 400;
+                        color: #000;
+                        // font-size: 16px;
+                        font-size: 22px;
+                        // @media (min-width:768px) {
+                        //     font-size: 22px;
+                        // }
+                    }
+                    h1{
+                        text-align: right;
+                        font-weight: 700;
+                        // font-size: 24px;
+                        max-width: 500px;
+                        // float: right;
+                        font-size: 48px;
+                        color: white;
+                        text-shadow: 2px 5px 3px rgba(0, 0, 0, 0.06);
+                        // @media (min-width:768px) {
+                        //     font-size: 48px;
+                        //     color: white;
+
+                        // }
+                    }
+                    .btn{
+                        text-align: right;
+                        width: 100%;
+                        a{
+                            border-radius: 5px;
+                            display: inline-block;
+                            // width: 150px;
+                            padding: 12px 25px;
+                            background-color: @themeRed;
+                            border: 2px solid #fff;
+                            color: #fff;
+                            font-size: 14px;
+                        }                    
+                    }
+
+                }
+
+            }
+            li:nth-child(1){
+                background: url(../images/2.jpg) no-repeat center;
+                background-size: cover;
+            }
+            li:nth-child(2){
+                background: url(../images/1.jpg) no-repeat center;
+                background-size: cover;
+            }
+            li:nth-child(3){
+                background: url(../images/4.jpg) no-repeat center;
+                background-size: cover;
+            }
+        }
+
+    }
+
+}
+
+// main-content 内容层 开始
+.main-content{
+    padding-top: 48px;
+
+    // welcome 部分
+    .welcome{
+        .row{
+            padding: 0 15px;
+        }
+        h3{
+            font-size: 40px;
+            font-weight: 100;
+            color: rgb(33, 37, 41);
+        }
+        h5{
+            color: #464646;
+            font-style: italic;
+            font-size: 22px;
+            line-height: 1.5;
+        }
+        .support-gird{
+            .icon-effect{
+                width: 84px;
+                height: 84px;
+                line-height: 90px;
+                text-align: center;
+                background-color: @themeRed;
+                border-radius: 50%;
+                span{
+                    display: inline-block;
+                    font-size: 28px;
+                    color: #fff;
+                    // text-align: center;
+                }
+            }
+            h5{
+                font-weight: bold;
+                font-size: 20px;
+                font-style: normal;
+                padding: 16px 0;
+            }
+            p{
+                color: #999;
+                line-height: 1.9;
+                font-size: 15px;
+            }
+        }
+        img{
+            width: 100%;
+        }
+
+    }
+
+    // 服务部分
+    .serives{
+        background-color: @themeRed;
+        padding: 48px;
+        .serive-grid{
+            text-align: center;
+            padding: 10px 0;
+            span{
+                color: white;
+                width: 90px;
+                height: 90px;
+                font-size: 32px;
+                display: inline-block;
+                border: 2px solid #fff;
+                border-radius: 50%;
+                line-height: 90px;
+                text-align: center;
+            }
+            h3{
+                color: white;
+                font-size: 24px;
+                font-weight: 600;
+            }
+            p{
+                color: white;
+                font-weight: 300;
+                line-height: 1.9;
+                color: #fdfdfd;
+            }
+        }
+    }
+
+    // Blog部分
+    .Blog{
+        text-align: center;
+        color: #999;
+        padding: 48px 0;
+        h3{
+            font-size: 28px;
+            font-weight: 500;
+            color: #000;
+        }
+        h5{
+            font-size: 15px;
+            font-style: normal;
+        }
+        .blog-grid{
+            padding-top: 30px;
+            text-align: left;
+            .blog-img{
+                position: relative;
+                img{
+                    width: 100%;
+                }
+                span{
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    display: inline-block;
+                    background-color: #38d2fe;
+                    width: 70px;
+                    height: 70px;
+                    color: white;
+                    text-align: center;
+                    b{
+                        display: block;
+                        font-size:26px;
+                    }
+                    i{
+                        font-style: normal;
+                        font-weight: 100;
+                        font-size: 16px;
+                    }
+                }
+            }
+            .blog-title{
+
+            }
+            .list{
+                a{
+                    font-size: 15px;
+                    margin-right: 10px;
+                    color: #999;
+                    i{
+                        color: @themeRed;
+                    }
+                }
+            }
+            p{
+                margin-top: 10px;
+            }
+        }
+    }
+
+    // fashion部分
+    .fashion{
+
+        background: url('../images/bg2.jpg') no-repeat top;
+        background-size: cover;
+        color: white;
+        padding: 48px 0;
+        min-height: 350px;
+        @media (min-width:1200px){
+            min-height: 530px;
+        }
+        span{
+            font-size: 26px;
+            color: rgba(255, 255, 255, 0.35);
+            font-weight: bold;
+        }
+        h3{
+            color: white;
+            font-weight: 800;
+            font-size: 32px;
+        }
+        p{
+            font-size: 15px;
+            line-height: 1.9;
+        }
+    }
+
+    // 展览 部分
+    .gallery{
+        padding: 48px 0;
+        text-align: center;
+        h3{
+            font-size: 28px;
+            font-weight: 500;
+            color: #000;
+        }
+        h5{
+            font-size: 15px;
+            font-style: normal;
+            color: #999;
+        }
+
+        img{
+            width: 100%;
+            margin: 15px 0;
+            padding: 0 15px;
+            @media (min-width:768px){
+                padding: 0;
+            }
+        }
+    }
+
+    // newsletter 部分
+    .newsletter{
+        color: #999;
+        text-align: center;
+        padding: 48px 0;
+        background: url('../images/bg3.jpg') no-repeat top;
+        background-size: cover;
+        h3{
+            font-size: 32px;
+            font-weight: bold;
+            color: white;
+        }
+        h5{
+            padding: 10px 0 40px;
+        }
+        .row{
+            padding: 0 15px;
+        }
+        input{
+            font-size: 15px;
+            margin-bottom: 15px;
+            padding: 13px;
+            width: 100%;
+            outline: none;
+            border-radius: 5px;
+            border: none;
+            &.submit{
+                background-color: #38d2fe;
+                color: white;
+                text-align: center;
+            }
+        }
+    }
+
+    // 联系我们 部分
+    .contactUs{
+        padding: 48px 0;
+        // color: @themeGray;
+        h3{
+            text-align: center;
+            color: black;
+            font-size: 28px;
+        }
+        h5{
+            padding-bottom: 48px;
+            text-align: center;
+            color: @themeGray;
+        }
+        .info-box{
+            box-shadow: 0px 2px 13px -1px rgba(0, 0, 0, 0.15);
+            padding: 40px;
+            margin: 15px 0;
+            h3{
+                text-align: left;
+                color: @themeBlue;
+            }
+            p{
+                color: @themeGray;
+            }
+            form{
+                input{
+                    padding: 11px;
+                    display: block;
+                    width: 100%;
+                    font-size: 15px;
+                    margin-bottom: 15px;
+                    border: none;
+                    border-bottom: 1px solid #828282;
+                    &.submit{
+                        border: none;
+                        background-color: @themeRed;
+                        color: white;
+                        margin-top: 50px;
+                        font-size: 16px;
+                    }
+                }
+                textarea{
+                    padding: 11px;
+                    display: block;
+                    width: 100%;
+                    font-size: 15px;
+                    margin-bottom: 15px;
+                    border: none;
+                    border-bottom: 1px solid #828282;
+                    resize: none;
+                    height: 196px;
+                }
+            }
+        }
+
+    }
+
+}
+
+// footer 脚部 开始
+.footer{
+    background-color: black;
+    padding: 48px 0;
+    h3{
+        color: white;
+        font-size: 20px;
+        padding-bottom: 48px;
+    }
+    h4{
+        color: white;
+        font-size: 16px;
+    }
+    p{
+        color: @themeGray;
+        font-size: 14px;
+    }
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li{
+            padding-bottom: 15px;
+            a{
+                color: @themeGray;
+                font-size: 16px;
+            }
+        }
+    }
+
+    .footer-bottom{
+        margin-top:20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        text-align: center;
+        div{
+            padding-top: 20px;
+
+            &.info{
+                color: @themeGray;
+                font-size: 16px;
+                padding: 0 15px;
+                a{
+                    color: @themeRed;
+                    font-size: 16px;
+                    transition: all 0.3s;
+                    &:hover{
+                        color: white;
+                    }
+                }
+            }            
+        }
+
+    }
+}

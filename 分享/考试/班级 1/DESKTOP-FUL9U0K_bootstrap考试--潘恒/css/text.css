@@ -1,0 +1,333 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+body .hade-A {
+  margin: 0;
+  padding: 0;
+}
+body .hade-A .navbar {
+  padding-top: 15px;
+  background: white;
+  border: none;
+}
+body .hade-A .navbar .navbar-header {
+  padding-left: 50px;
+}
+body .hade-A .navbar .navbar-header a {
+  font-size: 40px;
+  color: #FC427B;
+  font-family: 'Srisakdi', cursive;
+}
+body .hade-A .navbar .navbar-nav {
+  float: right;
+}
+body .hade-A .navbar .navbar-nav li > a {
+  color: #4c4c4c;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+body .hade-A .navbar .navbar-nav li > a:hover {
+  color: red;
+}
+body .hade-A .navbar .navbar-nav li .dropdown-menu {
+  background: #4e4949;
+}
+body .hade-A .navbar .navbar-nav li .dropdown-menu li > a {
+  color: white;
+}
+body .hade-A .navbar .navbar-nav li .dropdown-menu li > a:hover {
+  color: #4e4949;
+}
+body .body-A {
+  overflow: hidden;
+}
+body .body-A .carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  background: red;
+  border: 3px solid white;
+}
+body .body-A .carousel-indicators li.active {
+  width: 12px;
+  height: 12px;
+  background: white;
+}
+body .body-A .carousel .carousel-inner .item .carousel-caption {
+  top: 50%;
+  margin-top: -100px;
+  position: absolute;
+}
+body .body-A .carousel .carousel-inner .item .carousel-caption .w3ls_banner_txt {
+  text-align: right;
+  width: 500px;
+  position: relative;
+  left: 20%;
+  float: right;
+}
+body .body-A .carousel .carousel-inner .item .carousel-caption .w3ls_banner_txt h5 {
+  font-size: 20px;
+  color: black;
+}
+body .body-A .carousel .carousel-inner .item .carousel-caption .w3ls_banner_txt h3 {
+  font-size: 50px;
+  font-weight: 700;
+}
+body .body-A .carousel .carousel-inner .item .carousel-caption .w3ls_banner_txt a > button {
+  color: white;
+  width: 160px;
+  height: 50px;
+  letter-spacing: 1px;
+  border: 1px solid white;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  background: #ec4d9d;
+}
+body .body-B {
+  padding-top: 20px;
+}
+body .body-B .body-bl .box {
+  padding-top: 20px;
+  left: 100px;
+}
+body .body-B .body-bl .box h3 {
+  font-weight: 100;
+  font-size: 40px;
+}
+body .body-B .body-bl .box h4 {
+  font-size: 28px;
+}
+body .body-B .body-bl .box span {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  background: #FC427B;
+  color: white;
+  font-size: 30px;
+  line-height: 80px;
+  text-align: center;
+  -webkit-border-radius: 40px;
+     -moz-border-radius: 40px;
+          border-radius: 40px;
+}
+body .body-B .body-br .box {
+  width: 500px;
+}
+body .body-B .body-br .box img {
+  width: 100%;
+}
+body .body-C {
+  height: 300px;
+  width: 100%;
+  background: #FC427B;
+}
+body .body-C div {
+  padding-top: 80px;
+  text-align: center;
+}
+body .body-C div span {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  background: #FC427B;
+  color: white;
+  font-size: 30px;
+  line-height: 80px;
+  text-align: center;
+  -webkit-border-radius: 40px;
+     -moz-border-radius: 40px;
+          border-radius: 40px;
+  border: 1px solid white;
+}
+body .body-C div h4 {
+  color: white;
+  font-size: 25px;
+  font-weight: 700;
+}
+body .body-C div p {
+  color: white;
+  font-size: 15px;
+  font-weight: 300;
+}
+@media (max-width: 768px) {
+  body .body-C {
+    height: 650px;
+  }
+  body .body-C div {
+    padding-top: 40px;
+  }
+}
+@media (max-width: 1080px) {
+  body .mn {
+    min-height: 420px;
+  }
+}
+@media (max-width: 1080px) {
+  body .mn {
+    min-height: 500px;
+  }
+}
+@media (max-width: 1280px) {
+  body .mn {
+    min-height: 530px;
+  }
+}
+@media (max-width: 1366px) {
+  body .mn {
+    min-height: 560px;
+  }
+}
+body .body-D .body-d1 {
+  text-align: center;
+}
+body .body-D .body-d1 p {
+  padding-top: 20px;
+  color: #999494;
+}
+body .body-D .body-d2 {
+  padding-top: 50px;
+}
+body .body-D .body-d2 .div1 {
+  width: 100%;
+}
+body .body-D .body-d2 .div1 img {
+  width: 100%;
+}
+body .body-D .body-d2 .div1 .body-d2A {
+  line-height: 40px;
+  text-align: center;
+  width: 80px;
+  height: 80px;
+  background: skyblue;
+  position: absolute;
+  bottom: 0;
+  color: white;
+}
+body .body-D .body-d2 .div1 .body-d2A h2 {
+  bottom: 0;
+}
+body .body-D .body-d2 .div1 .body-d2A span {
+  font-size: 16px;
+  font-weight: 100;
+  display: block;
+}
+body .body-D .body-d2 .body-d2B {
+  height: 100px;
+}
+body .body-D .body-d2 .body-d2B h4 {
+  padding-top: 10px;
+  font-size: 25px;
+}
+body .body-D .body-d2 .body-d2B div > a {
+  color: #FC427B;
+}
+body .body-D .body-d2 .body-d2B div > a span {
+  color: #918b8b;
+}
+body .body-D .body-d2 .body-d2B p {
+  padding-top: 10px;
+  color: #918b8b;
+  line-height: 16px;
+  letter-spacing: 1px;
+}
+body .body-F {
+  margin-top: 80px;
+  background: url(../images/bg2.jpg) no-repeat top;
+  -moz-background-size: 100% 500px;
+       background-size: 100% 500px;
+}
+body .body-F div {
+  position: relative;
+}
+body .body-F div img {
+  max-width: 100%;
+}
+body .body-F div .body-f1 {
+  width: 500px;
+  position: absolute;
+  top: 40px;
+  left: 50px;
+}
+body .body-F div .body-f1 span {
+  color: #b6b2b2;
+  font-size: 30px;
+  font-weight: 700;
+}
+body .body-F div .body-f1 h3 {
+  color: white;
+  font-weight: 700;
+}
+body .body-F div .body-f1 p {
+  margin: 0;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+body .body-E {
+  padding-bottom: 30px;
+  text-align: center;
+}
+body .body-E .body-e1 img {
+  padding-top: 20px;
+  max-width: 100%;
+}
+body .body-G {
+  min-width: 100%;
+  min-height: 300px;
+  background: url(../images/bg3.jpg) no-repeat top;
+}
+body .body-G .body-g1 {
+  position: relative;
+  text-align: center;
+}
+body .body-G .body-g1 img {
+  width: 100%;
+}
+body .body-G .body-g1 .body-g1A {
+  position: absolute;
+  top: 50px;
+}
+body .body-G .body-g1 .body-g1A h3 {
+  color: white;
+}
+body .body-G .body-g1 .body-g1A p {
+  color: #bbb9b4;
+}
+body .body-G .body-g1 .body-g1A .body-g1B {
+  padding-top: 30px;
+}
+body .body-G .body-g1 .body-g1A .body-g1B .g1 {
+  margin: 0;
+  padding: 0;
+}
+body .body-G .body-g1 .body-g1A .body-g1B .g1 input {
+  width: 90%;
+  height: 50px;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  outline: none;
+  border: none;
+}
+body .body-G .body-g1 .body-g1A .body-g1B .btn > input {
+  background: #398cc7;
+  color: white;
+  font-weight: 500;
+}
+body .body-H {
+  padding-top: 20px;
+  height: 200px;
+}
+body .body-H .body-h1 {
+  position: relative;
+  text-align: center;
+}
+body .body-H .body-h1 h3 {
+  color: black;
+}
+body .body-H .body-h1 p {
+  color: #8a8885;
+}
+/*# sourceMappingURL=./text.css.map */
