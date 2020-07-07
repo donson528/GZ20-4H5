@@ -1,0 +1,89 @@
+// 变量
+@red: rgb(160, 64, 64);
+@border-width: 1%;
+
+@sm: 768px;
+@md: 992px;
+@lg: 1200px;
+
+// 转义
+@minsm: ~"(min-width: 768px)";
+@minmd: (min-width: @md);
+
+// 混合
+// .bordered {
+//   border-top: dotted 1px black;
+//   border-bottom: solid 2px black;
+// }
+
+// 加上括号之后 这个类就不会出现
+// .bordered(@color) {
+//   border-top: dotted 1px black;
+//   border-bottom: solid 2px black;
+// }
+
+// 带参数
+// .bordered(@color) {
+//     border-top: dotted 1px @color;
+//     border-bottom: solid 2px @color;
+//   }
+
+// 带默认值
+.bordered(@color: red) {
+    border-top: dotted 1px @color;
+    border-bottom: solid 2px @color;
+  }
+
+// 768 750  992 970 1200 1170
+// 嵌套语法
+body {
+  background: @red;
+  // 媒体查询 与冒泡
+  width: 100%;
+  @media @minsm {
+    width: 750px;
+  }
+  @media @minmd {
+    width: 970px;
+  }
+  @media (min-width: @lg) {
+    width: 1170px;
+  }
+
+  .xxx() {
+    text-align: center;
+  }
+  .test {
+    color: blue;
+    // .bordered;
+    // .bordered();
+    // .bordered(red);
+    .bordered(blue);
+    .yyy {
+      text-decoration: none;
+    }
+  }
+  &.main {
+    border: none;
+    // 作用域
+    .xxx;
+    // 运算符
+    // width: @border-width * 5;
+    width: 100% / 12;
+    // 跨作用域 组织复用
+    .test.yyy;
+  }
+  &:hover {
+    background: green;
+  }
+  // &不要空格
+}
+
+// @media (min-width: 768px) {
+//     body {
+//         width: 750px;
+//     }
+// }
+
+// #00000 + 010101
+// 0-f 16 16*16 r g b 256

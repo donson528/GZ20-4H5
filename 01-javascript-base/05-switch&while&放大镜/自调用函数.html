@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            var f = function () {
+                console.log("xxx");
+            };
+            f();
+
+            (function () {
+                console.log("xxx");
+            })();
+            // 自调用函数
+
+            var name = "world";
+            (function () {
+                console.log(name);
+                // 函数局部作用域 先找局部作用域的变量
+                if (typeof name === "undefined") {
+                    // 作用域跟if没关系
+                    var name = "jack";
+                    console.log("goodbye " + name);
+                } else {
+                    console.log("hello " + name);
+                }
+            })();
+
+            // 自调用 作用域（只有两种 全局 函数局部） 变量提升
+
+            // 新手不要研究
+            // var name = "world";
+            // (function () {
+            //     console.log(name)
+            //     if (typeof name == undefined) {
+            //         let name = "jack";
+            //         console.log("goodbye " + name);
+            //     } else {
+            //         console.log("hello " + name);
+            //     }
+            // })();
+        </script>
+    </body>
+</html>

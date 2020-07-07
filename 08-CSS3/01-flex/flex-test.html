@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .box div:nth-of-type(1) {
+        background: lightcoral;
+      }
+      .box div:nth-of-type(2) {
+        background: lightseagreen;
+      }
+      .box div:nth-of-type(3) {
+        background: limegreen;
+      }
+      .box div:nth-of-type(4) {
+        background: red;
+      }
+      .box div:nth-of-type(5) {
+        background: orange;
+      }
+    </style>
+
+    <div class="box">
+      <div class="a">A</div>
+      <div class="b">BBB <br> BBB <br> B </div>
+      <div class="c">C</div>
+    </div>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        background: lightblue;
+        display: flex;
+
+        /* flex-direction: row-reverse; */
+        flex-direction: column;
+
+        flex-wrap: wrap;
+
+        align-content: flex-start;
+        /* 行与行 */
+
+        align-items: flex-end;
+        /* 行内元素 */
+
+
+
+      }
+      .box div {
+        /* flex: 1 0 0; */
+        /* flex: 1; */
+        /* width: 80px; */
+        flex-basis: 80px;
+
+      }
+      .box .a {
+        /* width: 150px; */
+        /* flex-basis: 50px; */
+
+        /* flex-grow: 1; */
+        /* flex-basis: 0; */
+
+        /* flex-shrink: 1; */
+      }
+      .box .b {
+        /* width: 50px; */
+        /* flex-basis: 100px; */
+
+        /* flex-grow: 2; */
+        /* flex-basis: 0; */
+        /* flex-shrink: 2; */
+      }
+      .box .c {
+        width: 100px;
+        /* flex-basis: 150px; */
+
+        /* flex-grow: 1; */
+        /* flex-basis: 0; */
+        /* flex-shrink: 1; */
+      }
+    </style>
+    <!-- 50 100 150 -->
+    <!-- 37.5 50 112.5 -->
+    <!-- 12.5 50 37.5 -->
+    <!-- 1 2*2 3 = 8  -->
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <label>
+        男
+        <select name="man" id="man">
+            <option value="鼠">鼠</option>
+            <option value="牛">牛</option>
+            <option value="虎">虎</option>
+            <option value="兔">兔</option>
+            <option value="龙">龙</option>
+        </select>
+    </label>
+    <label>
+        女
+        <select name="woman" id="woman">
+            <option value="鼠">鼠</option>
+            <option value="牛">牛</option>
+            <option value="虎">虎</option>
+            <option value="兔">兔</option>
+            <option value="龙">龙</option>
+        </select>
+    </label>
+    <button>查询</button>
+    <div class="result"></div>
+    <script>
+        // 请求地址：http://v.juhe.cn/joke/content/list.php
+        // 请求参数：sort=desc&page=1&pagesize=5&time=1592807105&key=d938f8e823b58c0ea83d8d61710f22e4
+        // 请求方式：GET
+
+        $('button').click(function () {
+            $.get("http://api.kele8.cn/agent/http://apis.juhe.cn/sxpd/query",
+                {
+                    men: $('#man').val(),
+                    women: $('#woman').val(),
+                    key: '857913958e9cdff2295a2e90dc0f3884'
+                }, function (data, textStatus, jqXHR) {
+                    console.log(data);
+                    $('.result').html(data.result.data)
+                },
+                "json" // 预期的响应格式
+            );
+        })
+    </script>
+</body>
+
+</html>

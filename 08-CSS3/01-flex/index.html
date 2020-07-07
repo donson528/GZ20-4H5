@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="grid.css" />
+    <style>
+    body {
+        margin: 0;
+    }
+      div[class^="col"] {
+        border: 1px solid red;
+      }
+      .row {
+        background: lightblue;
+      }
+
+      .service {
+        background: orange;
+        /* padding: 1px; */
+      }
+      .service .row {
+        margin: 50px 0;
+      }
+
+      .content {
+        background: orange;
+      }
+      .content .row {
+        margin: 50px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="service">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-6">col-xs-6</div>
+          <div class="col-xs-6">col-xs-6</div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-6">col-xs-6</div>
+          <div class="col-xs-6">col-xs-6</div>
+        </div>
+        <div class="row">
+          <div class="col-xs-6">col-xs-6</div>
+          <div class="col-xs-6">col-xs-6</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="row">
+        <div class="col-xs-4">col-xs-4</div>
+        <div class="col-xs-4">col-xs-4</div>
+        <div class="col-xs-4">col-xs-4</div>
+      </div>
+
+      <!-- BFC 盒模型 -->
+    </div>
+  </body>
+</html>

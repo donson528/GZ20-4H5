@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            var x = "a";
+            // if 后面括号里面 应该预期 布尔值
+            if (x < 5) {
+                console.log("条件成立了");
+            } else {
+                console.log("条件不成立");
+            }
+
+            // 强制类型转换
+            // Number
+            // String
+            // Boolean
+            // undefined null
+            // [] {}
+
+            // 包装方法 Number() String() Boolean()
+            console.log("Number(10)", Number(10));
+            console.log("Number('10')", Number("10"));
+
+            console.log("Number('hello')", Number("hello"));
+            console.log("Number('hello10')", Number("hello10"));
+            console.log("Number('10hello')", Number("10hello"));
+
+            console.log("Number('0')", Number("0"));
+            console.log("Number('')", Number(""));
+            console.log("Number(' ')", Number(" "));
+            console.log("Number('      ')", Number("      "));
+
+            console.log("Number(true)", Number(true));
+            console.log("Number(false)", Number(false));
+
+            console.log("Number(undefined)", Number(undefined));
+            console.log("Number('undefined')", Number("undefined"));
+            console.log("Number(null)", Number(null));
+            console.log("Number('null')", Number("null"));
+
+            console.log("Number([])", Number([]));
+            console.log("Number([11])", Number([11]));
+            console.log("Number(['11'])", Number(["11"]));
+            console.log("Number(['hh'])", Number(["hh"]));
+            console.log("Number([11,22])", Number([11, 22]));
+
+            console.log("Number({})", Number({}));
+            console.log("Number({age:17})", Number({ age: 17 }));
+
+            // 字符串数值 直接转
+            // 空字符串  空格字符串 n*空格字符串 => 0
+            // 任意字母符号（除了.） => NaN
+
+            // undefinde => NaN  null=>0
+            // true=>1 false=>0
+
+            // [] => 0 [11]=>11 ['11']=>11 ['aa']=>NaN
+
+            console.log("======");
+
+            console.log("String('hello')", String("hello"));
+            console.log("String(10)", String(10));
+            console.log("String(true)", String(true));
+            console.log("String(false)", String(false));
+            console.log("String([])", String([]));
+            console.log("String([1,2,3,4])", String([1, 2, 3, 4]));
+            // console.log("String({name:'nick'})", String({name:'nick'}));
+        </script>
+    </body>
+</html>

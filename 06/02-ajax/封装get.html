@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 回调函数封装方法
+      function getJSON() {
+        var url, data, callback;
+        // console.log(arguments);
+        url = arguments[0];
+        if (typeof arguments[1] == "function") {
+          callback = arguments[1];
+        } else {
+          data = arguments[1];
+          callback = arguments[2];
+        }
+
+        var xhr = new XMLHttpRequest();
+
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState == 4) {
+            // 成功
+            // console.log()
+            callback(JSON.parse(xhr.response));
+          }
+        };
+
+        // test.json?name=nick&age=17
+
+        if (data) {
+          var queryStr = "";
+          for (key in data) {
+            //   console.log(key, data[key]);
+            queryStr += key + "=" + data[key] + "&";
+          }
+          queryStr = queryStr.slice(0, -1);
+
+          var url = url + "?" + queryStr;
+        }
+        console.log(url);
+
+        xhr.open("GET", url, true);
+        xhr.send();
+      }
+
+      getJSON("./test.json", { name: "nick", age: 17 }, function (data) {
+        console.log("data", data);
+      });
+
+      //   getJSON("./test.json", function (data) {
+      //     console.log("data", data);
+      //   });
+    </script>
+
+    <!-- 封装post -->
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <input type="text" />
+    <ul class="test"></ul>
+
+    <!-- https://suggest.taobao.com/sug?code=utf-8&q=%E6%89%8B%E6%9C%BA%E5%A3%B3 -->
+    <script>
+      $("input").on("input", function () {
+        var value = $(this).val();
+        // console.log(value);
+
+        if (value) {
+          $.get(
+            "https://suggest.taobao.com/sug?code=utf-8&q=%E6%89%8B%E6%9C%BA%E5%A3%B3",
+            {
+              code: "utf-8",
+              q: value,
+            },
+            function (data, textStatus, jqXHR) {
+              var str = "";
+              console.log(data.result);
+              data.result.forEach(function (element, index) {
+                str += "<li>" + element[0] + "</li>";
+
+                $("ul.test").html(str);
+              });
+            },
+            "jsonp"
+          );
+        } else {
+          $("ul.test").html('');
+        }
+      });
+    </script>
+  </body>
+</html>

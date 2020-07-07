@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- $(selector).load(URL,data,callback); -->
+    <div class="test"></div>
+    <script>
+        console.log('获取开始', new Date().getTime())
+        // 回调函数
+        $('.test').load('./demo.txt h1', function () {
+            console.log('获取完成', new Date().getTime())
+            // 成功 失败
+        })
+
+// 必需的 URL 参数规定您希望加载的 URL。
+
+// 可选的 data 参数规定与请求一同发送的查询字符串键/值对集合。
+
+// 可选的 callback 参数是 load() 方法完成后所执行的函数名称。
+
+
+// resuest请求 response响应 服务器返回
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <script>
+      var a = 10;
+      var x = a;
+      console.log("a", a, "x", x);
+
+      a = 20;
+      console.log("a", a, "x", x);
+      // 基本数据类型 字符串 数值 布尔值
+      // 特殊 null undefined
+      // 栈内存里面 保存 值
+
+      var b = { name: "nick", age: 17 };
+      var y = b;
+      console.log("b", b, "y", y);
+
+      b.age = 18;
+      console.log("b", b, "y", y);
+      // 复杂数据类型 数组 对象
+      // 栈内存保存的是 堆内存的指针地址
+      // 复制复杂数据类型 当前的复制方法 实际上只是复制了 指针地址 到栈内存
+      // 并没有clone一份堆内存的  浅拷贝
+
+      // 堆内存栈内存
+
+      var c = [11, 22, 33];
+      var z = c;
+      console.log("c", c, "z", z, "c === z", c === z);
+      
+      c.push(44)
+
+
+    </script> -->
+
+    <script>
+      var c = [11, 22, 33];
+      //   var z = c.concat();
+      var z = c.slice();
+      c.splice();
+
+      // 数组深拷贝 返回新数组的都可以
+      c.push(44);
+
+      var a = { name: "nick", age: 17 };
+      // Object.assign(a, { job: "自由职业", age: 18 });
+      // 拼接对象 如果相同属性 取后面的
+      var x = Object.assign({}, a);
+
+      // https://zealdocs.org/  vscode => dash zeal velocity
+
+      // 思考题 笔试题 如何判断两个数组（对象）是否相等
+      // [] == [] false [1,2] == [1,2]
+    </script>
+  </body>
+</html>

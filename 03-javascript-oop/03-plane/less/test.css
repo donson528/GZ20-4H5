@@ -1,0 +1,9 @@
+#header {
+  color: green;
+}
+#header .navigation {
+  font-size: 12px;
+}
+#header.logo {
+  width: 300px;
+}

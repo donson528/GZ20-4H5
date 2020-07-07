@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="get">
+        <input type="text" id="name" name="name" value="hello world">
+        <select name="level" id="level">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+
+        <input type="range" id="range" min="50" max="60" step="0.1">
+        <input type="submit">
+        <input type="reset">
+    </form>
+    <style>
+        input {
+            color: red;
+        }
+    </style>
+    <script>
+        var nameDom = document.getElementById('name')
+        var levelDom = document.getElementById('level')
+        var rangeDom = document.getElementById('range')
+
+        nameDom.oninput = function (event) {
+            // console.log(this,event.target)
+            console.log(this.value)
+            // nameDom.value
+            // nameDom.value ='xxx'
+        }
+        nameDom.onfocus = function() {
+            console.log('获取到焦点')
+            this.value = ''
+        }
+
+        nameDom.onblur = function() {
+            console.log('失去焦点')
+            // this.value = 'hello world'
+        }
+
+
+        levelDom.oninput = function () {
+            console.log(this.value)
+        }
+        rangeDom.oninput = function () {
+            console.log(this.value)
+        }
+    </script>
+</body>
+</html>

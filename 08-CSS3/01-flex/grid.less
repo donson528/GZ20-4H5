@@ -1,0 +1,36 @@
+.genarate-column(@n,@i:1,@size) when(@n >= @i) {
+  .col-@{size}-@{i} {
+    width: 100% / @n * @i;
+  }
+  .genarate-column(12, @i + 1, xs);
+}
+.genarate-column(12,1,xs);
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  [class^="col"] {
+    float: left;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  // 浮动父元素高度丢失 暂未考虑 [XXX]
+}
+.container {
+  width: 500px;
+  margin: 0 auto;
+
+  &::before,
+  &::after {
+    content: "";
+    display: table;
+    // clear: both;
+  }
+  //   解决bfc模型 第一个 最后一个 元素外边距撑不开父元素  [XXX]
+}

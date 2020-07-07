@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            var d = new Date();
+            console.log(typeof d);
+            console.log(d);
+            console.log(d.getDay());
+
+            // getFullYear()	从 Date 对象以四位数字返回年份。
+            // getMonth()	从 Date 对象返回月份 (0 ~ 11)。
+            // getDate()	从 Date 对象返回一个月中的某一天 (1 ~ 31)。
+
+            // getDay()	从 Date 对象返回一周中的某一天 (0 ~ 6)。
+
+            // getHours()	返回 Date 对象的小时 (0 ~ 23)。
+            // getMinutes()	返回 Date 对象的分钟 (0 ~ 59)。
+            // getSeconds()	返回 Date 对象的秒数 (0 ~ 59)。
+            // getMilliseconds()	返回 Date 对象的毫秒(0 ~ 999)。
+
+            // 月份 0-11 星期 周日0
+
+            // d.setMonth(3);
+            console.log(d);
+
+            // setFullYear()	设置 Date 对象中的年份（四位数字）。
+            // setMonth()	设置 Date 对象中月份 (0 ~ 11)。
+            // setDate()	设置 Date 对象中月的某一天 (1 ~ 31)。
+            // setHours()	设置 Date 对象中的小时 (0 ~ 23)。
+            // setMinutes()	设置 Date 对象中的分钟 (0 ~ 59)。
+            // setSeconds()
+            // setMilliseconds()	设置 Date 对象中的毫秒 (0 ~ 999)。
+
+            var today = new Date();
+            var d1 = new Date("October 13, 1975 11:13:00");
+            var d2 = new Date(79, 5, 24);
+            var d3 = new Date(1979, 5, 24, 11, 33, 0);
+            var d4 = new Date(2020, 6, 31, 0, 0, 0);
+
+            var d5 = new Date(2020, 0, 31);
+            // d5.setMonth(1)
+            d5.setDate(d5.getDate() + 30);
+
+            // 时间戳 1970 1月 1日 0 0 0 时间点开始 计时
+            // 计算机 元年
+            today.getTime(); // 1590547580663
+            // 例如 计算时间差 当前距离d4（放暑假）
+            console.log(today, d4);
+            var r = 5576633212;
+            r / (24 * 60 * 60 * 1000);
+        </script>
+    </body>
+</html>

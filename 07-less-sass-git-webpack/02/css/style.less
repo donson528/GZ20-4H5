@@ -1,0 +1,151 @@
+@font-face {
+  font-family: xxx;
+  src: url("noway-regular-webfont.ttf");
+}
+body {
+  font-family: "xxx";
+}
+.v-header {
+  background: #fb5872;
+  .navbar {
+    background: none;
+    border: none;
+    .navbar-brand {
+      img {
+        width: 160px;
+        // margin-top: -30px;
+      }
+    }
+    .navbar-nav {
+      & > li {
+        & > a {
+          line-height: 66px;
+          color: white;
+          font-size: 16px;
+          &:hover {
+            color: #5bacdc;
+          }
+        }
+        &.open {
+          & > a {
+            background: none;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+  .v-banner {
+    .panel {
+      text-align: center;
+      border-radius: 15px;
+      background: lightgray;
+      border: none;
+      box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.15);
+      .panel-heading {
+        background: #8727e2;
+        border-radius: none;
+        line-height: 36px;
+        border-radius: 0 0 15px 15px;
+        border: none;
+      }
+    }
+    form {
+      .flag {
+        vertical-align: middle;
+        width: 20px;
+        height: 15px;
+        background: url("https://socialfrontier.com/build/img/flags.png");
+        display: inline-block;
+        background-position-x: 0px;
+      }
+    }
+  }
+}
+
+.v-band {
+  .carousel {
+    // background: red;
+  }
+}
+
+section h1.title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+img {
+  max-width: 100%;
+}
+
+.v-social {
+  background: #1b1c52;
+  color: white;
+  padding: 30px 0;
+  h1.title {
+    color: white;
+  }
+  .row {
+    text-align: center;
+    img {
+      width: 100px;
+    }
+    h3 {
+    }
+    p {
+      text-align: left;
+    }
+  }
+}
+
+.v-help {
+  padding: 30px 0;
+  h1.title {
+    color: #fa5c6b;
+  }
+
+  .row:nth-of-type(1) {
+    img {
+      position: relative;
+      left: 300px;
+      &.active {
+        left: 0;
+      }
+    }
+  }
+  .row:nth-of-type(2) {
+    img {
+      position: relative;
+      left: -300px;
+      &.active {
+        left: 0;
+      }
+    }
+  }
+}
+.animated {
+  transition: all 1s;
+}
+
+
+@media (max-width: 767px) {
+  .v-header {
+    .navbar {
+      .navbar-brand {
+        img {
+          width: 100px;
+        }
+      }
+    }
+
+  }
+  .navbar-default .navbar-nav {
+    li {
+      text-align: center;
+    }
+    .open .dropdown-menu > li > a {
+      color: white;
+    }
+  }
+}

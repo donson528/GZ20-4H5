@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 方括号 -->
+    <!-- <script>
+        var str = 'hello world'
+        // var patt = /a/gi
+
+        console.log(str.match(/a/gi))
+        console.log(str.match(/llo/gi))
+
+        // [abc] abc中任意字符
+        console.log(str.match(/[abcde]/gi))
+
+        // [^abc]任何不在方括号之间的字符。 ^取反 写在方括号里面
+        console.log(str.match(/[^abcde]/gi))
+
+
+        var str = 'hello world 123!xxx?000'
+
+        // 查找任何从 0 至 9 的数字。
+        console.log(str.match(/[0-9]/gi))
+        // 查找任何从 A 至 z 的数字。
+        console.log(str.match(/[A-z]/gi))
+        console.log(str.match(/[^A-z]/gi))
+
+        // 查找字符串 hello 或者 world
+        console.log(str.match(/(hello|world)/gi))
+        console.log(str.match(/(hello|world)/gi))
+
+    </script> -->
+
+
+
+    <!-- 元字符 . \w  \d \s \b -->
+    <!-- <script>
+        var str = 'hello world 123!xxx?000你好世界\n'
+
+        // . 查找单个所有字符，除了换行和行结束符 包括中文
+        console.log(str.match(/./gi))
+
+        console.log(str.match(/w/gi))
+        // 字母和数字
+        console.log(str.match(/\w/gi))
+        // 非 字母和数字
+        console.log(str.match(/\W/gi))
+
+
+        // \d \D 数字
+        console.log(str.match(/\d/gi))
+        console.log(str.match(/\D/gi))
+
+
+        //  \s \S 空白字符 空格 回车 换行 制表符
+        console.log(str.match(/\s/gi))
+
+        // \b 单词边界 主要是英文 单词
+        console.log(str.match(/\b./gi))
+        // \n
+
+        console.log(str.match(/[\u4E00-\u9FBF]/g))
+
+    </script> -->
+
+
+    <!-- 量词 -->
+    <script>
+        var str = 'helloo world 123!xxx?000.ooo你好世界\n'
+
+        // + 一个或者一个以上
+        console.log(str.match(/o+/gi))
+
+        // * 零个或者一个或者多个 有没有都可以
+        console.log(str.match(/lo*/gi))
+
+
+        // ? 零个或者一个 有没有都可以 不能有多个
+        console.log(str.match(/lo?/gi))
+
+    </script>
+</body>
+
+</html>

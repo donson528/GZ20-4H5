@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bigbox {
+            width: 300px;
+            height: 300px;
+            background: lightgreen;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background: lightpink;
+        }
+
+        .smallbox {
+            width: 100px;
+            height: 100px;
+            background: lightseagreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bigbox">bigbox
+        <div class="box">box
+            <div class="smallbox">smallbox</div>
+        </div>
+    </div>
+    <script>
+        var bigbox = document.querySelector('.bigbox')
+        var box = document.querySelector('.box')
+        var smallbox = document.querySelector('.smallbox')
+
+        // element.addEventListener(event, function, useCapture)
+        // useCapture 是否启用捕获模式 默认false
+
+        // addEventListener绑定多个事件  onclik只能绑定一次
+        // bigbox.addEventListener('click', function (event) {
+        //     console.log('bigbox 点击', event)
+        // }, false)
+
+        // bigbox.addEventListener('click', function (event) {
+        //     console.log('bigbox 点击2', event)
+        // }, false)
+
+
+        // bigbox.onclick = function (event) {
+        //     console.log('bigbox 点击', event)
+        // }
+        // // 相当于重新赋值
+        // bigbox.onclick = function (event) {
+        //     console.log('bigbox 点击2', event)
+        // }
+
+
+
+        // bigbox.addEventListener('click', function (event) {
+        //     console.log('bigbox 点击', event)
+        // }, false)
+        // box.addEventListener('click', function (event) {
+        //     console.log('box 点击', event)
+        // }, false)
+        // smallbox.addEventListener('click', function (event) {
+        //     console.log('smallbox 点击', event)
+        // }, false)
+
+
+
+
+        // 全部启用捕获  从外到内 从父到子
+        // bigbox.addEventListener('click', function (event) {
+        //     console.log('bigbox 点击', event)
+        // }, true)
+        // box.addEventListener('click', function (event) {
+        //     console.log('box 点击', event)
+        // }, true)
+        // smallbox.addEventListener('click', function (event) {
+        //     console.log('smallbox 点击', event)
+        // }, true)
+
+
+        // // 捕获冒泡混合使用 先捕获后冒泡
+        // bigbox.addEventListener('click', function (event) {
+        //     console.log('bigbox 点击', event)
+        // }, true)
+        // box.addEventListener('click', function (event) {
+        //     console.log('box 点击', event)
+        // }, false)
+        // smallbox.addEventListener('click', function (event) {
+        //     console.log('smallbox 点击', event)
+        // }, true)
+
+        //  // 捕获冒泡混合使用 先捕获后冒泡
+        //  bigbox.addEventListener('click', function (event) {
+        //     console.log('bigbox 点击', event)
+        // }, false)
+        // box.addEventListener('click', function (event) {
+        //     console.log('box 点击', event)
+        // }, true)
+        // smallbox.addEventListener('click', function (event) {
+        //     console.log('smallbox 点击', event)
+        // }, true)
+
+
+        // // 捕获冒泡混合使用 先捕获后冒泡 再混合阻止冒泡方法
+        bigbox.addEventListener('click', function (event) {
+            console.log('bigbox 点击', event)
+        }, true)
+
+        box.addEventListener('click', function (event) {
+            console.log('box 点击', event)
+            // event.stopPropagation()
+            // event.stopImmediatePropagation()
+            // 阻止捕获与冒泡 
+            // stopPropagation stopImmediatePropagation只是体现在相同元素相同事件 不同函数 
+
+        }, true)
+        box.addEventListener('click', function (event) {
+            console.log('box 点击2', event)
+        }, true)
+
+        smallbox.addEventListener('click', function (event) {
+            console.log('smallbox 点击', event)
+            // event.stopPropagation()
+        }, true)
+
+
+        // cancelBubble=>IE  stopPropagation=>chrome firefox  
+
+    </script>
+
+    <a href="http://www.baidu.com">百度</a>
+    <form action="" method="get">
+        <input type="text" name="username">
+        <input type="submit" value="提交">
+    </form>
+    <script>
+        // event.preventDefault
+        // 阻止默认事件
+        document.links[0].onclick = function (event) {
+            console.log('xxx')
+            // 阻止浏览器默认事件
+            event.preventDefault()
+        }
+
+        document.forms[0].onclick = function () {
+            event.preventDefault()
+            console.log('xfdfd')
+        }
+    </script>
+</body>
+
+</html>

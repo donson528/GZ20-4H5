@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .swiper-content {
+                width: 300px;
+            }
+            .swiper-content img {
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="swiper">
+            <div class="swiper-content">
+                <img src="./images/lunbo1.jpg" alt="" />
+            </div>
+            <div class="swiper-control">
+                <button>prev</button>
+                <button>next</button>
+            </div>
+        </div>
+
+        <script>
+            var arr =['lunbo1.jpg','lunbo2.jpg','lunbo3.jpg'];
+            var prev = document.getElementsByTagName("button")[0];
+            var next = document.getElementsByTagName("button")[1];
+            var img = document.getElementsByTagName("img")[0];
+            var current = 0;
+            // 当前第一张
+
+            var nextPic = function () {
+                current++;
+                // 显示下一张  如果是第四张（不存在） 显示第一张
+                if (current > arr.length-1) {
+                    current = 0;
+                }
+                console.log(current);
+                // console.log("xx");
+                img.src = "./images/" + arr[current];
+            };
+
+            var prevPic = function () {
+                current--;
+                // 显示上一张
+                if (current < 0) {
+                    current = arr.length-1;
+                }
+
+                console.log(current);
+                // console.log("xx");
+                img.src = "./images/" + arr[current];
+            };
+
+            next.onclick = nextPic;
+            prev.onclick = prevPic;
+        </script>
+
+        <script>
+            // 弱类型编程语言
+            var x = 10;
+            console.log(x + 5);
+            var y = "10";
+            console.log(y + 5);
+            // 字符串拼接 字符串加数组 => 字符串
+        </script>
+
+        <!-- 作业 拓展 -->
+        <!-- 1 把所有的图片路径 放到一个数组里面  -->
+        <!-- 2 把所有图片全部列出来 类数组 只显示当前的current 其他的隐藏 -->
+    </body>
+</html>

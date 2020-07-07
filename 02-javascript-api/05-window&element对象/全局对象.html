@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // decodeURI()	解码某个编码的 URI。
+            // decodeURIComponent()	解码一个编码的 URI 组件。
+            // encodeURI()	把字符串编码为 URI。
+            // encodeURIComponent()	把字符串编码为 URI 组件。
+            // escape()
+            // unescape()
+
+            // parseFloat()	解析一个字符串并返回一个浮点数。
+            // parseInt()
+
+            var uri = "http://127.0.0.1:5500/05/全局对象.html";
+            console.log(encodeURI(uri));
+            console.log(decodeURI(encodeURI(uri)));
+            var str = "hello world 你好世界";
+
+            console.log(encodeURIComponent(str));
+            console.log(escape(str));
+            // 转为unicode编码
+
+            console.log(Number("10"));
+            console.log(Number("10px"));
+            console.log(parseInt("10px"));
+            console.log(parseInt("px10"));
+            console.log(parseInt("100px"));
+            console.log(parseInt("3.14159px"));
+            console.log(parseFloat("100px"));
+            console.log(parseFloat("3.14159px"));
+
+            console.warn(parseFloat("3.14159px"));
+            console.error(parseFloat("3.14159px"));
+            console.info(parseFloat("3.14159px"));
+            console.table({ name: "nick", age: 17 });
+            console.log({ name: "nick", age: 17 });
+
+            console.table([11, 22, 33]);
+            console.log([11, 22, 33]);
+
+            // 复习总结
+        </script>
+    </body>
+</html>

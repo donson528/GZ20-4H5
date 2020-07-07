@@ -1,0 +1,111 @@
+@font-face {
+  font-family: xxx;
+  src: url("noway-regular-webfont.ttf");
+}
+body {
+  font-family: "xxx";
+}
+.v-header {
+  background: #fb5872;
+}
+.v-header .navbar {
+  background: none;
+  border: none;
+}
+.v-header .navbar .navbar-brand img {
+  width: 160px;
+}
+.v-header .navbar .navbar-nav > li > a {
+  line-height: 66px;
+  color: white;
+  font-size: 16px;
+}
+.v-header .navbar .navbar-nav > li > a:hover {
+  color: #5bacdc;
+}
+.v-header .navbar .navbar-nav > li.open > a {
+  background: none;
+  color: white;
+}
+.v-header .v-banner .panel {
+  text-align: center;
+  border-radius: 15px;
+  background: lightgray;
+  border: none;
+  box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.15);
+}
+.v-header .v-banner .panel .panel-heading {
+  background: #8727e2;
+  border-radius: none;
+  line-height: 36px;
+  border-radius: 0 0 15px 15px;
+  border: none;
+}
+.v-header .v-banner form .flag {
+  vertical-align: middle;
+  width: 20px;
+  height: 15px;
+  background: url("https://socialfrontier.com/build/img/flags.png");
+  display: inline-block;
+  background-position-x: 0px;
+}
+section h1.title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+}
+img {
+  max-width: 100%;
+}
+.v-social {
+  background: #1b1c52;
+  color: white;
+  padding: 30px 0;
+}
+.v-social h1.title {
+  color: white;
+}
+.v-social .row {
+  text-align: center;
+}
+.v-social .row img {
+  width: 100px;
+}
+.v-social .row p {
+  text-align: left;
+}
+.v-help {
+  padding: 30px 0;
+}
+.v-help h1.title {
+  color: #fa5c6b;
+}
+.v-help .row:nth-of-type(1) img {
+  position: relative;
+  left: 300px;
+}
+.v-help .row:nth-of-type(1) img.active {
+  left: 0;
+}
+.v-help .row:nth-of-type(2) img {
+  position: relative;
+  left: -300px;
+}
+.v-help .row:nth-of-type(2) img.active {
+  left: 0;
+}
+.animated {
+  transition: all 1s;
+}
+@media (max-width: 767px) {
+  .v-header .navbar .navbar-brand img {
+    width: 100px;
+  }
+  .navbar-default .navbar-nav li {
+    text-align: center;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: white;
+  }
+}
+/*# sourceMappingURL=./style.css.map */

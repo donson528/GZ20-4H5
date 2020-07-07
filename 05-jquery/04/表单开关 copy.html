@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/jquery-color/2.1.2/jquery.color.min.js"></script>
+
+    <style>
+        input {
+            display: none;
+        }
+
+        .switch {
+            width: 60px;
+            height: 30px;
+            background: gray;
+            border-radius: 30px;
+            /* transition: all 0.3s; */
+        }
+
+        .switch .boll {
+            width: 20px;
+            height: 20px;
+            background: white;
+            position: relative;
+            top: 5px;
+            left: 5px;
+            border-radius: 20px;
+            /* transition: inherit; */
+        }
+
+        /* .switch.on {
+            background: lightgreen;
+        }
+
+        .switch.on .boll {
+            left: 35px;
+        } */
+    </style>
+</head>
+
+<body>
+    <form action="" method="get">
+        <label>
+            <input type="checkbox" name="" id="" checked>
+            <div class="switch on">
+                <div class="boll"></div>
+            </div>
+        </label>
+        <label>
+            <input type="checkbox" name="" id="">
+            <div class="switch">
+                <div class="boll"></div>
+            </div>
+        </label>
+
+        <hr>
+
+        <label>
+            <input type="radio" name="gender" id="" checked>
+            <div class="switch on">
+                <div class="boll"></div>
+            </div>
+        </label>
+        <label>
+            <input type="radio" name="gender" id="">
+            <div class="switch">
+                <div class="boll"></div>
+            </div>
+        </label>
+
+    </form>
+
+    <script>
+        $('form label input').on('input', function () {
+            // console.log($(this));
+            // if ($(this).prop('checked')) {
+            //     $(this).next().addClass('on')
+            // } else {
+            //     $(this).next().removeClass('on')
+            // }
+
+            $('form label input').each(function (index, element) {
+                if ($(element).prop('checked')) {
+                    $(element).next().animate({
+                        backgroundColor: '#f00'
+                    }).find('.boll').animate({
+                        left: '35px'
+                    })
+                } else {
+                    // $(element).next().removeClass('on')
+                    $(element).next().animate({
+                        backgroundColor: '#333'
+                    }).find('.boll').animate({
+                        left: '5px'
+                    })
+                }
+            })
+
+
+        })
+    </script>
+</body>
+
+</html>

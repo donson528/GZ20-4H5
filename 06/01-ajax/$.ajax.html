@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <button>btn</button>
+    <img src="./loading.gif" alt="">
+    <script>
+        // $.get("url", data,
+        //     function (data, textStatus, jqXHR) {
+
+        //     },
+        //     "dataType"
+        // );
+
+        // $.ajax({name:value, name:value, ... })
+
+        $('button').click(function () {
+
+            $.ajax({
+                url: './test.json',
+
+                // 请求之前
+                beforeSend: function (xhr) {
+                    console.log('发送ajax请求之前', new Date().getTime())
+
+                },
+                // 成功之后
+                success: function (data, status, xhr) {
+                    console.log('成功', data, status, xhr, new Date().getTime())
+                },
+                // 错误之后
+                error: function (xhr, status, error) {
+                    console.log('失败', xhr, status, error, new Date().getTime())
+                },
+
+                // 完成
+                complete: function (xhr, status) {
+                    console.log('完成', xhr, status, new Date().getTime())
+                }
+            });
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+        .active {
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box test" title="woshi title">box</div>
+    <img width="300" src="./img/after.jpg" alt="">
+    <img width="500" src="./img/before.jpg" alt="">
+    <script>
+        // $(selector).addClass(classname,function(index,oldclass))
+        // $('.box').addClass('test testA')
+        // $('.box').addClass('testA')
+        $('.box').click(function () {
+            // $(this).addClass('active')
+            $(this).addClass(function (index, oldclass) {
+                // console.log(index, oldclass)
+                // return 'pre-' + oldclass
+                // return oldclass + ' active'
+                return oldclass.split(' ').map(function (element) {
+                    return element + '-active'
+                }).join(' ')
+
+
+            })
+        })
+
+        // $(selector).removeClass(className);
+        // $(selector).toggleClass(className);
+
+
+
+        // 返回属性的值：
+        // $(selector).attr(attribute)
+        // 设置属性和值：
+        // $(selector).attr(attribute,value)
+        // 使用函数设置属性和值：
+        // $(selector).attr({attribute:value, attribute:value,...})
+        // attr()	设置或返回被选元素的属性/值
+        // $(selector).attr(attribute,function(index,currentvalue))
+        // 设置多个属性和值：
+
+
+        // console.log($('.box').attr('title'))
+        // $('.box').attr('title', 'xiugaide title')
+
+        // $('.box').attr({ title: 'xxx', id: 'yyy' })
+
+
+        // // $('img').attr('width', '200')
+        // $('img').attr('width', function (index, xxx) {
+        //     // console.log(index, xxx)
+        //     return xxx - 50
+        // })
+
+
+        // // $(selector).removeAttr(attribute)
+        // $('img').removeAttr('alt')
+
+
+
+        // prop()	设置或返回被选元素的属性/值
+
+        console.log($('.box').prop('title'))
+        $('.box').prop('title', 'xiugaide title')
+
+        // removeProp()	移除通过 prop() 方法设置的属性
+
+
+    </script>
+
+
+    <input type="text" value="hello">
+
+    <select name="fav" id="fav">
+        <option value="bmw">bmw</option>
+        <option value="tesela" selected>tesela</option>
+        <option value="nisson">nisson</option>
+    </select>
+
+    <input type="checkbox" name="xxx" id="xxx1" checked="checked">
+    <input type="checkbox" name="xxx" id="xxx2">
+
+    <script>
+        console.log($('input').attr('value'))
+        console.log($('input').prop('value'))
+
+        $('input').val('hello xxx')
+
+        console.log($('input').attr('value'))
+        console.log($('input').prop('value'))
+
+        // attr html固有属性
+        // prop 有状态的元素 表单（浏览器管理状态） 状态最新值 而不是默认值
+
+
+        $('#fav').attr('value')
+        $('#fav').prop('value')
+
+        $('#xxx1').attr('checked')
+        $('#xxx1').prop('checked')
+
+        // html  text  val
+    </script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <button class="counter">0</button>
+    <mark class="counter">10</mark>
+
+    <script>
+      // 封装插件
+      function Count(selecter) {
+        this.node = document.querySelector(selecter);
+        this.count = parseInt(this.node.innerText);
+
+        var _this = this;
+        this.node.onclick = function () {
+          _this.count++;
+          _this.node.innerText = _this.count;
+          // this.innerText
+        };
+      }
+
+      function init(selecter) {
+        var x = new Count(selecter);
+        // console.log(x);
+        return x;
+      }
+
+      var a = init("button.counter");
+      var b = init("mark.counter");
+    </script>
+
+    <!-- 插件使用说明 <div class="test" id="test">数字初始值</div> 自定样式 js init('#test') -->
+    <!-- 使用插件 -->
+    <div class="test">100</div>
+    <style>
+      .test {
+        width: 100px;
+        height: 100px;
+        background: red;
+      }
+    </style>
+    <script>
+      init(".test");
+    </script>
+  </body>
+</html>

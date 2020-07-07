@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li class="item">item 3 item</li>
+        <li>item 4</li>
+        <li>item 5</li>
+    </ul>
+    <script>
+
+        // $(selector).append(content,function(index,html))
+        // $('ul').append('<li>item xxx</li>')
+
+        // $('ul').append($('li.item'))
+        // 已经存在的元素表现形式 移动
+
+
+        // $('li').append('<i>xxx</i>')
+        // $('li').append(function (index, html) {
+        //     return '<i>' + index + '</i>'
+        // })
+
+        // $('li').each(function (index, element) {
+        //     $(element).append('<i>' + index + '<i/>')
+        // })
+
+
+        // $('ul').append('<li>item xxx</li>')
+        // $('<li>item xxx</li>').appendTo($('ul'))
+
+
+
+        // $('ul').prepend('<li>item xxx</li>')
+        // $('<li>item xxx</li>').prependTo($('ul'))
+
+        // $('ul').prepend($('li.item'))
+
+        // $("li.item").after("<p>Hello world!</p>");
+        $("<p>Hello world!</p>").insertAfter($("li.item"))
+        // $("li.item").before("<p>Hello world!</p>");
+
+        $('li').click(function () {
+            console.log(this)
+        })
+
+        // $('ul').append($('li.item').clone())
+        // $('ul').append($('li.item').clone(true))
+
+
+        // remove() 删除 不保留事件
+        // empty() 清空
+        // detach()	移除被选元素（保留数据和事件）
+
+        // $('li.item').remove()
+        // $('li.item').empty()
+
+        // var  x = $('li.item').remove()
+        // $('ul').append(x)
+
+        var  x = $('li.item').detach()
+        $('ul').append(x)
+
+
+        // 小练习 表单美化 http://www.jq22.com/demo/jqueryrichui201901242258/
+    </script>
+</body>
+
+</html>

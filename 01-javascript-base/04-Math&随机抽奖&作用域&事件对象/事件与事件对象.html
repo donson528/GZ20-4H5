@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="box test">box</div>
+        <style>
+            .box {
+                width: 100px;
+                height: 100px;
+                background: red;
+                transition: all 1s;
+                /* css3 过渡效果 all 过渡时间 */
+            }
+            /* .box:hover {
+            background: blue;
+            margin-left: 50px;
+        } */
+
+            .box.active {
+                background: blue;
+                /* margin-left: 50px; */
+            }
+        </style>
+
+        <script>
+            var box = document.getElementsByClassName("box")[0];
+
+            box.onclick = function (e) {
+                console.log("click", e);
+                // event js内置的 事件对象
+
+                // this.className = 'box active'
+                this.classList.toggle("active");
+
+                console.log(this, event.target);
+
+                // altKey ctrlKey shiftKey 快捷键组合
+
+                // clientX: 107
+                // clientY: 107
+                // layerX: 107
+                // layerY: 107
+                // pageX: 107
+                // pageY: 107
+                // x: 107
+                // y: 107
+                // 基于浏览器00点的偏移
+
+                // offsetX: 99
+                // offsetY: 99
+                // 基于当前盒子00点的偏移
+
+                // screenX: 1068
+                // screenY: 187
+                // 基于屏幕00点的偏移
+            };
+            // box.onmouseover = function () {
+            //     console.log('onmouseover')
+            // }
+
+            // box.onmouseout = function () {
+            //     console.log('onmouseout')
+            // }
+
+            box.onmousemove = function () {
+                console.log("onmousemove", event);
+            };
+
+            // classList方法
+            // box.classList.add('test')
+            // box.classList.remove('test')
+            // box.classList.toggle('test')
+        </script>
+    </body>
+</html>

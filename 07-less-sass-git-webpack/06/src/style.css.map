@@ -1,0 +1,1 @@
+{"version":3,"sources":["style.less","<input css 7>"],"names":[],"mappings":"AAAA;EACI,qCAAA;CCCH;ADFD;EAGQ,WAAA;EACA,4BAAA;EAAA,uBAAA;EAAA,yBAAA;EAAA,oBAAA;CCEP","file":"to.css","sourcesContent":[null,"body {\n  background: lightblue url('xxx.png');\n}\nbody .box {\n  color: red;\n  transition: all 0.3;\n}\n/*# sourceMappingURL=./style.css.map */"]}

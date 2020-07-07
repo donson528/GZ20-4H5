@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            button.active {
+                background: orange;
+                color: white;
+            }
+            li {
+                display: none;
+            }
+            li.active {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- <div class="btns">
+            <button onclick="showCurrent(0)">btn1</button>
+            <button onclick="showCurrent(1)">btn2</button>
+            <button onclick="showCurrent(2)">btn3</button>
+        </div> -->
+
+        <div class="btns">
+            <button>btn1</button>
+            <button>btn2</button>
+            <button>btn3</button>
+        </div>
+        <ul class="contents">
+            <li>content1</li>
+            <li>content2</li>
+            <li>content3</li>
+        </ul>
+
+        <script>
+            var lis = document.getElementsByTagName("li");
+            var btns = document.getElementsByTagName("button");
+
+            function showCurrent(index) {
+                for (var i = 0; i < lis.length; i++) {
+                    if (i == index) {
+                        lis[i].className = "active";
+                        btns[i].className = "active";
+                    } else {
+                        lis[i].className = "";
+                        btns[i].className = "";
+                    }
+                }
+            }
+
+            for (var i = 0; i < btns.length; i++) {
+                btns[i].index = i
+                btns[i].onclick = function () {
+                    showCurrent(this.index)
+                }
+                
+            }
+        </script>
+    </body>
+</html>

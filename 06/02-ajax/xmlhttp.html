@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var xhr = new XMLHttpRequest();
+      //   console.log(xhr);
+      // readyState 请求xhr对象状态码 0
+      // response 响应
+      // status 响应状态码 0
+
+      xhr.onreadystatechange = function () {
+        // console.log("readyState", xhr.readyState);
+        if (xhr.readyState == 4) {
+          // 完成
+          if (xhr.status == 404) {
+            // cuowu
+          } else {
+            // 成功
+            console.log(xhr.response);
+          }
+        }
+      };
+
+      xhr.open("GET", "test.json", true);
+      //   console.log(xhr);
+      // readyState: 1
+
+      xhr.send();
+
+      //   console.log(xhr.response);
+      // readyState: 4
+      // status: 200
+
+      //   setTimeout(function () {
+      //     console.log(xhr.response);
+      //   },3000)
+    </script>
+  </body>
+</html>

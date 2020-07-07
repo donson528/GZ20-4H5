@@ -1,0 +1,92 @@
+.borderd(@color: red) {
+  border: 1px solid @color;
+}
+
+body {
+  .test when (1 > 2) {
+    background: blue;
+    .borderd();
+  }
+}
+
+// loop
+
+.loop(@counter) when (@counter > 0) {
+  .loop((@counter - 1)); // next iteration
+  width: (10px * @counter); // code for each iteration
+}
+
+div {
+  .loop(3);
+}
+
+.generate-columns(@n) when (@n > 0) {
+  .col-@{n} {
+    width: @n * 10px;
+  }
+  .generate-columns((@n - 1));
+}
+.generate-columns(3);
+
+// .col-xs-1 {
+//     width: 100% / 12 * 1;
+// }
+// .col-xs-2 {
+//     width: 100% / 12 * 2;
+// }
+
+// .generate-col-xs(@n, @i:1) when (@i <= @n) {
+//   .col-xs-@{i} {
+//     width: 100% / 12 * @i;
+//   }
+//   .generate-col-xs(@n ,@i+1);
+// }
+
+// .generate-col-xs(12);
+
+// .generate-col-sm(@n, @i:1) when (@i <= @n) {
+//   .col-sm-@{i} {
+//     width: 100% / 12 * @i;
+//   }
+//   .generate-col-sm(@n ,@i+1);
+// }
+
+// @media (min-width: 768px) {
+//     .generate-col-sm(12);
+// }
+
+
+
+@sm: 500px;
+@md: 1000px;
+@lg: 1500px;
+
+@minsm: (min-width: @sm);
+@minmd: (min-width: @md);
+@minlg: (min-width: @lg);
+
+
+.generate-col(@n, @i:1, @size:xs) when (@i <= @n) {
+  .col-@{size}-@{i} {
+    width: 100% / @n * @i;
+  }
+  .generate-col(@n ,@i+1,@size);
+}
+
+
+
+.generate-col(12, 1, xs);
+@media @minsm {
+    .generate-col(12, 1, sm);
+}
+@media @minmd {
+    .generate-col(12, 1, md);
+}
+@media @minlg {
+    .generate-col(12, 1, lg);
+}
+
+
+.generate-col(24, 1, 24);
+
+@import "test.less";

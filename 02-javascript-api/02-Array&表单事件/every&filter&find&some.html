@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // var arr = [54, 65, 45, 53, 43, 23, 6, 4, 5];
+            var arr = [54, 65, 45, 16, 53, 43, 23];
+
+            // every 检测数值元素的每个元素是否都符合条件。
+            var a = arr.every(function (element) {
+                return element >= 18;
+            });
+
+            function myEvery(arr, callback) {
+                var init = true;
+                for (var i = 0; i < arr.length; i++) {
+                    var r = callback(arr[i]);
+                    // console.log(arr[i], r);
+                    init = init && r;
+                    if (!r) break;
+                }
+                return init;
+            }
+            var aa = myEvery(arr, function (element) {
+                return element >= 18;
+            });
+            // lodash
+
+            // filter 返回符合条件所有元素的数组。
+            var b = arr.filter(function (element) {
+                return element >= 18;
+            });
+
+            // find() 方法返回通过测试（函数内判断）的数组的第一个元素的值。
+            var c = arr.find(function (element) {
+                return element >= 18;
+            });
+
+            // some 检测数组元素中是否有元素符合指定条件。
+            var d = arr.some(function (element) {
+                return element >= 18;
+            });
+
+            // map 通过指定函数处理数组的每个元素，并返回处理后的数组。
+            var e = arr.map(function (element) {
+                return element * 2;
+            });
+
+            var arr = [1, 2, 3, 4];
+            // array.reduce(function(total, currentValue, currentIndex, arr), initialValue)
+            var f = arr.reduce(function (totle, element, index, arr) {
+                return totle + element;
+            }, 5);
+
+            var obj = {
+                name: "nick",
+                age: 17,
+            };
+
+            console.log(typeof arr);
+            console.log(typeof obj);
+            console.log(typeof null);
+            console.log(Array.isArray(arr));
+            console.log(Array.isArray(obj));
+            console.log(Array.isArray(null));
+            console.log(null === null);
+
+            console.log(typeof NaN);
+            console.log(typeof 5);
+
+            console.log(isNaN(NaN));
+            console.log(isNaN(undefined));
+            console.log(isNaN(5));
+        </script>
+
+        <!-- 作业 封装mySome -->
+    </body>
+</html>

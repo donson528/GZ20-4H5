@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .box div:nth-of-type(1) {
+        background: lightcoral;
+      }
+      .box div:nth-of-type(2) {
+        background: lightseagreen;
+      }
+      .box div:nth-of-type(3) {
+        background: limegreen;
+      }
+      .box div:nth-of-type(4) {
+        background: red;
+      }
+      .box div:nth-of-type(5) {
+        background: orange;
+      }
+    </style>
+
+    <div class="box">
+      <div class="a">A</div>
+      <div class="b">
+        B <br />
+        B <br />
+        B
+      </div>
+      <div class="c">C</div>
+    </div>
+    <hr />
+    <style>
+      .box {
+        background: lightblue;
+        display: flex;
+        width: 250px;
+        height: 300px;
+        /* flex-direction: row; */
+        /* flex-direction: row-reverse; */
+        /* flex-direction: column; */
+        /* 主轴方向为垂直 */
+
+        flex-wrap: wrap;
+        /* 空余为负值的情况 就换行 */
+        /* flex-wrap: wrap-reverse; */
+
+        /* align-content: stretch; */
+        /* align-content: center; */
+        /* align-content: flex-start; */
+        /* align-content: flex-end; */
+        align-content: space-between;
+        /* align-content: space-around; */
+        /* 换行的时候 侧轴方向所有子项排放位置 整体来看 侧轴 AC*/
+
+        /* align-items: stretch; */
+        /* align-items: center; */
+        /* align-items: flex-start; */
+        align-items: flex-end;
+        /* align-items: baseline; */
+        /* 侧轴方向每一个子项 各自的位置 局部 主轴 AB */
+
+
+
+
+
+      }
+      .box div {
+        /* flex: 1; */
+        /* 均分[主轴]方向空余尺寸 */
+        flex-basis: 100px;
+      }
+      .box .a {
+        /* width: 100px; */
+
+        /* flex-grow: 1; */
+        /* flex-shrink: 1; */
+      }
+      .box .b {
+        /* flex-grow: 2; */
+        /* flex-shrink: 2; */
+      }
+      .box .c {
+        /* flex-grow: 1; */
+        /* flex-shrink: 1; */
+      }
+    </style>
+  </body>
+</html>
