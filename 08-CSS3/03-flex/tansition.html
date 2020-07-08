@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="box">box</div>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background: red;
+        /* transition: all 1s; */
+        transition-property: margin-left;
+        transition-duration: 1s;
+        transition-delay: 0s;
+        /* transition-timing-function: linear; */
+        /* transition-timing-function: cubic-bezier(0, 0, 1, 1); */
+        transition-timing-function: cubic-bezier(0.25,0.1,0.25,1.5);
+        animation-timing-function: ease;
+        animation-timing-function: ease-in;
+        animation-timing-function: ease-in-out;
+
+        /* transition-timing-function: cubic-bezier(0.99, -0.01, 0.15, 1); */
+      }
+      .box.active {
+        margin-left: 500px;
+        background: blue;
+      }
+    </style>
+
+    <script>
+      document.querySelector(".box").onclick = function () {
+        this.classList.toggle("active");
+      };
+    </script>
+  </body>
+</html>
