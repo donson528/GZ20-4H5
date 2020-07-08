@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="box boxF">box</div>
+
+    <hr />
+    <div class="box boxE">box</div>
+    <hr />
+
+    <div style="display: flex; justify-content: space-between;">
+      <div class="box boxA">box</div>
+      <div class="box boxA">box</div>
+    </div>
+    <hr />
+    <div class="box boxB">box</div>
+    <hr />
+    <div class="box boxC">box</div>
+
+    <hr />
+    <div class="box boxD">box</div>
+
+    xxx
+
+    <div style="display: flex; justify-content: space-between;">
+      <div class="box boxA">box</div>
+      <div class="box boxA">box</div>
+    </div>
+
+    <style>
+      body {
+        perspective: 1500px;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background: red;
+        transition: all 1s;
+        /* 50% 50% 0 */
+        /* transform-origin: 0 0; */
+        /* transform-origin: 20px 20px; */
+        transform-origin: left bottom;
+      }
+      .boxA.active {
+        /* transform: rotate(360deg); */
+        transform: rotateX(60deg);
+        /* transform: rotateY(60deg); */
+        /* transform: rotateZ(60deg); */
+      }
+      .boxB.active {
+        /* transform: translateX(100px) translateY(100px); */
+        /* transform: translateZ(100px) */
+        transform: translate(100px, 100px);
+      }
+      .boxC.active {
+        transform: scale(2);
+      }
+
+      .boxD.active {
+        /* transform: skewX(60deg); */
+        /* transform: skewY(30deg); */
+        transform: skew(44deg, 44deg);
+      }
+
+      .boxE.active {
+        width: 50px;
+        height: 50px;
+      }
+      .boxF.active {
+        background: royalblue;
+      }
+    </style>
+    <script>
+      document.querySelectorAll(".box").forEach(function (element, index) {
+        element.onclick = function () {
+          this.classList.toggle("active");
+        };
+      });
+    </script>
+
+    <!-- <div class="stage">
+        <div class="test">test</div>
+    </div> -->
+    <style>
+      .stage {
+        width: 500px;
+        height: 500px;
+        background: lightblue;
+        position: relative;
+        margin: 100px;
+
+        perspective: 750px;
+        /* 150 800 */
+      }
+      .test {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: red;
+        transition: all 1s;
+        transform-origin: 0 0;
+      }
+
+      .stage:hover .test {
+        transform: rotateY(60deg);
+      }
+    </style>
+    <!-- https://c.runoob.com/codedemo/3391 -->
+    <!-- /* https://gudh.github.io/ihover/dist/index.html */ -->
+    <!-- 幽灵按钮 -->
+    <!-- https://ianlunn.github.io/Hover/ -->
+
+    <button>more<i></i></button>
+    <style>
+      button {
+        width: 200px;
+        height: 50px;
+        line-height: 50px;
+        background: lightblue;
+        border: none;
+        outline: none;
+        position: relative;
+        overflow: hidden;
+        margin: 100px;
+      }
+      button i {
+        width: 100px;
+        height: 100px;
+        background: red;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        pointer-events: none;
+        transform: scale(0);
+        transition: transform 1s, opacity 1s;
+        border-radius: 50%;
+        opacity: 0;
+      }
+      button:hover i {
+        transform: scale(5);
+        opacity: 1;
+      }
+    </style>
+    <script>
+      var btn = document.querySelector("button");
+      var dot = btn.querySelector("i");
+
+      btn.onmousemove = function (event) {
+        console.log(event.offsetX, event.offsetY);
+        dot.style.left = event.offsetX - 50 + "px";
+        dot.style.top = event.offsetY - 50 + "px";
+
+        // this.classList.add('active')
+      };
+    </script>
+  </body>
+</html>
