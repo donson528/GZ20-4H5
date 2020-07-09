@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="cube">
+      <!-- <div class="side left">left</div>
+      <div class="side right">right</div>
+      <div class="side top">top</div>
+      <div class="side bottom">bottom</div> -->
+      <div class="side front">front</div>
+      <div class="side back">back</div>
+    </div>
+    <!-- <div class="cube">
+      <div class="side left">left</div>
+      <div class="side right">right</div>
+      <div class="side top">top</div>
+      <div class="side bottom">bottom</div>
+      <div class="side front">front</div>
+      <div class="side back">back</div>
+    </div>
+    <div class="cube">
+      <div class="side left">left</div>
+      <div class="side right">right</div>
+      <div class="side top">top</div>
+      <div class="side bottom">bottom</div>
+      <div class="side front">front</div>
+      <div class="side back">back</div>
+    </div> -->
+
+    <style>
+      html {
+        height: 100%;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        align-items: center;
+        perspective: 1000px;
+        perspective-origin: 50% 50%;
+        transform-style: preserve-3d;
+      }
+
+      .cube {
+        width: 200px;
+        height: 200px;
+        background: rgba(173, 216, 230, 0.459);
+        position: relative;
+        transform-style: preserve-3d;
+        transform: rotateY(180deg);
+        margin: 0 20px;
+        transition: all 1s;
+      }
+      .side {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .left {
+        background: lightcoral;
+        transform: rotateY(-90deg) translateZ(100px);
+      }
+      .right {
+        background: lightsalmon;
+        transform: rotateY(90deg) translateZ(100px);
+      }
+
+      .top {
+        background: lightgreen;
+        transform: rotateX(90deg) translateZ(100px);
+      }
+      .bottom {
+        background: lightseagreen;
+        transform: rotateX(90deg) translateZ(-100px);
+      }
+      .front {
+        /* background: red; */
+        z-index: 9;
+        transform: translateZ(100px);
+
+      }
+      .back {
+        /* background: rebeccapurple; */
+        transform: rotateY(180deg) translateZ(100px);
+      }
+    </style>
+
+    <!-- <script>
+      document.body.onmousemove = function (event) {
+        console.log(event.clientX, event.clientY);
+        document.body.style.perspectiveOrigin =
+          event.clientX + "px " + event.clientY + "px";
+      };
+    </script> -->
+  </body>
+</html>
