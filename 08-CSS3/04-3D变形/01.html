@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="box">box</div>
+    <div class="box1">box1</div>
+    <style>
+      body {
+        /* perspective: 1000px;
+        transform-style: preserve-3d; */
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background: lightblue;
+      }
+      .box1 {
+        width: 100px;
+        height: 100px;
+        background: red;
+        transform: rotateY(60deg) translateY(-50px);
+      }
+    </style>
+
+    <div class="boxA"><div>boxA</div></div>
+    <style>
+      .boxA {
+        width: 100px;
+        height: 100px;
+        background: lightblue;
+        position: relative;
+        perspective: 300px;
+        perspective-origin: 50% 50%;
+      }
+      .boxA div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: red;
+        transform-origin: left center;
+        transform: rotateY(30deg);
+      }
+    </style>
+  </body>
+</html>
