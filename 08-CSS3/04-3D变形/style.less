@@ -1,13 +1,11 @@
 html,
 body {
     height: 100%;
-	font-family: "宋体";
-	
+    font-family: "宋体";
 }
 body {
-	// transform: rotateY(-89deg);
-	transform-style: preserve-3d;
-	
+    // transform: rotateY(-89deg);
+    transform-style: preserve-3d;
 }
 .stage {
     height: 100%;
@@ -16,30 +14,64 @@ body {
     align-items: center;
     background-color: #7889cb;
 
-    
-	transform-style: preserve-3d;
-	transition: all 0.5s ease;
-	perspective: 1000px;
-	
-
-    .card {
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    perspective: 1500px;
+    .w {
         width: 30%;
+        max-width: 360px;
+        transition: inherit;
+        
+        
+    }
+    .card {
+        width: 100%;
+        padding-bottom: 140%;
+        
         // height: 640px;
-        padding-bottom: 40%;
+        
+        max-height: 480px;
         background: url("./600x600.jpg") red no-repeat;
         background-size: cover;
         background-position: center;
-
         color: white;
 
         border-radius: 15px;
 
         position: relative;
 
-		transform-origin: 50% 50% 100px;
-		transition: inherit;
+        transform-origin: 50% 50% 100px;
+        transition: inherit;
 
-		transform: translateZ(200px);
+        transform: translateZ(200px);
+        z-index: 2;
+        transform-style: preserve-3d;
+
+
+
+        .mask {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            transition: inherit;
+        }
+        &::before {
+            .mask;
+            background: rgba(42, 33, 22, 0.397);
+            z-index: -1;
+        }
+        &::after {
+            .mask;
+            background: rgba(0, 0, 0, 0.842);
+            // z-index: -99;
+            transform: translateZ(-15px);
+            box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.733);
+        }
         .content {
             position: absolute;
             top: 0;
@@ -50,22 +82,96 @@ body {
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            transition: inherit;
 
+            h1,
+            h3 {
+                transition: all 1s;
+            }
             h1 {
                 font-size: 36px;
+                transform: translateZ(50px);
             }
             h3 {
                 // font-size: 12px;
-                line-height: 3em;
+                line-height: 4em;
+                transform: translateZ(40px);
             }
             ul.chart {
                 display: flex;
                 justify-content: center;
+                transition: inherit;
+
                 li {
+                    width: 20px;
+                    height: 20px;
+                    background: white;
+                    margin: 0 10px;
+
+                    position: relative;
+                    transform-style: preserve-3d;
+                    transition: all 0.8s;
+                    color: transparent;
+
+                    transform: rotate(-60deg);
+                    text-align: right;
+                    span {
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        transform: translateZ(0);
+                        background: white;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        transition: inherit;
+                    }
+                    &::before {
+                        .mask;
+                        content: "20000";
+                        width: 0;
+                        background: linear-gradient(
+                            to right,
+                            rgb(148, 148, 148),
+                            white
+                        );
+                        left: auto;
+                        right: 0;
+
+                        border-radius: 0;
+                        transform-origin: right bottom;
+                        transform: rotateY(-90deg) translateZ(20px);
+                        // color: red;
+                        padding-right: 20px;
+                    }
+
+                    &::after {
+                        .mask;
+                        // content: "10000";
+
+                        width: 0;
+                        background: linear-gradient(
+                            to right,
+                            rgb(148, 148, 148),
+                            white
+                        );
+                        left: auto;
+                        right: 0;
+                        // color: red;
+
+                        border-radius: 0;
+                        transform-origin: right bottom;
+                        transform: rotateY(-90deg) rotateX(-90deg);
+                    }
                 }
             }
             p {
                 font-size: 36px;
+                line-height: 3em;
+                transform: translateZ(10px);
             }
         }
     }
@@ -73,6 +179,60 @@ body {
     &.active {
         .card {
             transform: translateZ(200px) rotateX(60deg);
+            &::before {
+                background: rgba(16, 47, 68, 0.466);
+            }
+
+            .content {
+                h1,
+                h3 {
+                    opacity: 0;
+                }
+                ul.chart {
+                    li {
+                        color: black;
+                        span {
+                            color: black;
+                        }
+
+                        &:nth-of-type(1) {
+                            transform: rotate(-60deg) translateZ(100px);
+                            &::before,
+                            &::after {
+                                width: 100px;
+                            }
+                        }
+                        &:nth-of-type(2) {
+                            transform: rotate(-60deg) translateZ(150px);
+                            &::before,
+                            &::after {
+                                width: 150px;
+                            }
+                        }
+                        &:nth-of-type(3) {
+                            transform: rotate(-60deg) translateZ(80px);
+                            &::before,
+                            &::after {
+                                width: 80px;
+                            }
+                        }
+                        &:nth-of-type(4) {
+                            transform: rotate(-60deg) translateZ(130px);
+                            &::before,
+                            &::after {
+                                width: 130px;
+                            }
+                        }
+                        &:nth-of-type(5) {
+                            transform: rotate(-45deg) translateZ(90px);
+                            &::before,
+                            &::after {
+                                width: 90px;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
