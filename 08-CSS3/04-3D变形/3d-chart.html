@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/minireset.css/0.0.2/minireset.min.css" />
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="stage">
+        <div class="card">
+            <div class="content">
+            <h1>STEPS</h1>
+            <h3>THIS WEEK</h3>
+            <ul class="chart">
+                <li>1</li>
+                <li>1</li>
+                <li>1</li>
+            </ul>
+            <p>93,000</p>
+        </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.stage').onclick = function () {
+            this.classList.toggle('active')
+        }
+    </script>
+</body>
+</html>

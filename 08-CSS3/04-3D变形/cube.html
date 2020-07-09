@@ -48,10 +48,11 @@
       .cube {
         width: 200px;
         height: 200px;
-        background: rgba(173, 216, 230, 0.459);
+        /* background: rgba(173, 216, 230, 0.459) url('./1.jpg'); */
+        background-size: cover;
         position: relative;
         transform-style: preserve-3d;
-        transform: rotateY(180deg);
+        /* transform: rotateY(180deg); */
         margin: 0 20px;
         transition: all 1s;
       }
@@ -89,17 +90,17 @@
 
       }
       .back {
-        /* background: rebeccapurple; */
+        background: rebeccapurple url('./1.jpg');
         transform: rotateY(180deg) translateZ(100px);
       }
     </style>
 
-    <!-- <script>
+    <script>
       document.body.onmousemove = function (event) {
         console.log(event.clientX, event.clientY);
         document.body.style.perspectiveOrigin =
           event.clientX + "px " + event.clientY + "px";
       };
-    </script> -->
+    </script>
   </body>
 </html>
