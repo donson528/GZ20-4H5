@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="box" title="xxx">box</div>
+        <style>
+            .box {
+                /* width: 100%; */
+                /* width: calc(100% - 20px); */
+                width: 400px;
+                height: 200px;
+                /* background: hsl(0, 100%, 90%); */
+                /* background: hsla(0, 100%, 50%, 0.5); */
+                /* border: 10px solid blue; */
+                /* background: transparent; */
+
+                /* background: linear-gradient( red, green); */
+                /* background: linear-gradient( to right bottom, red, green); */
+                /* background: linear-gradient( 145deg, red, green); */
+                /* background: linear-gradient( 145deg, hsl(90, 50%, 70%), hsl(270, 50%, 80%)); */
+
+                /* background: linear-gradient(
+                        to right,
+                        red 50%,
+                        transparent 50%,
+                        transparent 80%,
+                        blue 80%
+                    ),
+                    linear-gradient(
+                        red 50%,
+                        transparent 50%,
+                        transparent 80%,
+                        blue 80%
+                    );*/
+
+                /* background: linear-gradient(red 10%, green 10%, green 20%); */
+                /* background: repeating-linear-gradient(
+                    45deg,
+                    red 0px,
+                    red 10px,
+                    transparent 10px,
+                    transparent 20px
+                ), 
+                repeating-linear-gradient(
+                    -45deg,
+                    red 0px,
+                    red 10px,
+                    transparent 10px,
+                    transparent 20px
+                ); */
+
+                /* background: radial-gradient( circle at top,red, green); */
+                /* background: radial-gradient(
+                    circle at top,
+                    red 0px,
+                    red 10px,
+                    green 10px,
+                    green 20px
+                ); */
+
+                background: repeating-radial-gradient(
+                    circle at top,
+                    red 0px,
+                    red 10px,
+                    transparent 10px,
+                    transparent 20px
+                ),
+                repeating-radial-gradient(
+                    circle at left,
+                    red 0px,
+                    red 10px,
+                    transparent 10px,
+                    transparent 20px
+                );
+            }
+            .box::after {
+                content: attr(title);
+            }
+        </style>
+    </body>
+</html>
