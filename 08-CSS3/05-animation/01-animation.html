@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="box">box</div>
+        <style>
+            .box {
+                width: 100px;
+                height: 100px;
+                background: red;
+                animation-name: mymove;
+                animation-duration: 3s;
+                animation-delay: 1s;
+                /* animation-iteration-count: 2; */
+                animation-iteration-count: infinite;
+
+                animation-direction: alternate;
+                /* animation-direction: alternate-reverse; */
+                /* animation-direction: reverse; */
+                animation-timing-function: ease-in-out;
+                animation-play-state: running;
+                /* 可以暂停 */
+            }
+            /* @keyframes mymove {
+                from {
+                    transform: translateX(0);
+                }
+                to {
+                    transform: translateX(200px);
+                }
+            } */
+
+            @keyframes mymove {
+                0% {
+                    transform: translateX(0);
+                }
+                50% {
+                    /* transform: translateX(100px) translateY(100px); */
+                }
+                100% {
+                    transform: translateX(200px);
+                }
+            }
+        </style>
+
+        <button>btn</button>
+        <style>
+            button {
+                /* animation: myscale 1s infinite alternate; */
+                /* animation-play-state: paused; */
+            }
+            button:hover {
+                /* animation-play-state: running; */
+                animation: myscale 1s infinite alternate;
+
+            }
+            @keyframes myscale {
+                from {
+                    transform: scale(1);
+                }
+                to {
+                    transform: scale(1.2);
+                }
+            }
+        </style>
+
+        <div class="wobble">wobble</div>
+        <style>
+            .wobble {
+                width: 200px;
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+                background: lightgray;
+                transform-origin: top center;
+            }
+            .wobble:hover {
+                animation: mywobble 0.8s linear;
+            }
+            @keyframes mywobble {
+                0% {
+                    transform: skewX(0deg);
+                }
+                10% {
+                    transform: skewX(-15deg);
+                }
+                30% {
+                    transform: skewX(12deg);
+                }
+                50% {
+                    transform: skewX(-9deg);
+                }
+                70% {
+                    transform: skewX(6deg);
+                }
+                90% {
+                    transform: skewX(-3deg);
+                }
+                100% {
+                    transform: skewX(0deg);
+                }
+            }
+        </style>
+    </body>
+</html>
